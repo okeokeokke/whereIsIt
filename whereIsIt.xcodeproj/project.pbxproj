@@ -3,19 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5FAEED889DB2AEEB914A272 /* Pods_whereIsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */; };
+		E851A9E525036E6500AE5CF5 /* AddTextNameToListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */; };
+		E851A9E72503A35E00AE5CF5 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851A9E62503A35E00AE5CF5 /* Realm.swift */; };
 		E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59624E686420004A2E7 /* AppDelegate.swift */; };
 		E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59824E686420004A2E7 /* SceneDelegate.swift */; };
-		E89FB59B24E686420004A2E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59A24E686420004A2E7 /* FirstViewController.swift */; };
-		E89FB59D24E686420004A2E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59C24E686420004A2E7 /* SecondViewController.swift */; };
 		E89FB5A024E686420004A2E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89FB59E24E686420004A2E7 /* Main.storyboard */; };
 		E89FB5A224E686430004A2E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5A124E686430004A2E7 /* Assets.xcassets */; };
 		E89FB5A524E686430004A2E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5A324E686430004A2E7 /* LaunchScreen.storyboard */; };
 		E89FB5B024E686430004A2E7 /* whereIsItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB5AF24E686430004A2E7 /* whereIsItTests.swift */; };
 		E89FB5BB24E686430004A2E7 /* whereIsItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB5BA24E686430004A2E7 /* whereIsItUITests.swift */; };
+		E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */; };
+		E89FB5CF24E686A20004A2E7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CA24E686A20004A2E7 /* icon.png */; };
+		E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CB24E686A20004A2E7 /* rockerIcon.png */; };
+		E89FB5D124E686A20004A2E7 /* textIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CC24E686A20004A2E7 /* textIcon.png */; };
+		E89FB5D224E686A20004A2E7 /* bagIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CD24E686A20004A2E7 /* bagIcon.png */; };
+		E8ADFEC824FA518800E95E4C /* dokoniaruLanchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = E8ADFEC724FA518800E95E4C /* dokoniaruLanchScreen.png */; };
+		E8ADFECA24FA547100E95E4C /* TextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADFEC924FA547100E95E4C /* TextListViewController.swift */; };
+		E8ADFECC24FA54F800E95E4C /* HomeTextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADFECB24FA54F800E95E4C /* HomeTextListViewController.swift */; };
+		E8ADFECE24FA553E00E95E4C /* RockerListTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADFECD24FA553E00E95E4C /* RockerListTextViewController.swift */; };
+		E8ADFED024FA556500E95E4C /* BagTextListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ADFECF24FA556500E95E4C /* BagTextListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50E279F880401734E2C5D3EE /* Pods-whereIsIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsIt.release.xcconfig"; path = "Target Support Files/Pods-whereIsIt/Pods-whereIsIt.release.xcconfig"; sourceTree = "<group>"; };
+		52D0E739E378ED4B98ACCBE8 /* Pods-whereIsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsIt.debug.xcconfig"; path = "Target Support Files/Pods-whereIsIt/Pods-whereIsIt.debug.xcconfig"; sourceTree = "<group>"; };
+		A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whereIsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextNameToListViewController.swift; sourceTree = "<group>"; };
+		E851A9E62503A35E00AE5CF5 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		E89FB59324E686420004A2E7 /* whereIsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whereIsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89FB59624E686420004A2E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E89FB59824E686420004A2E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E89FB59A24E686420004A2E7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E89FB59C24E686420004A2E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E89FB59F24E686420004A2E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E89FB5A124E686430004A2E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E89FB5A424E686430004A2E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +65,16 @@
 		E89FB5B624E686430004A2E7 /* whereIsItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whereIsItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89FB5BA24E686430004A2E7 /* whereIsItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereIsItUITests.swift; sourceTree = "<group>"; };
 		E89FB5BC24E686430004A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookInHouseIcon.png; sourceTree = "<group>"; };
+		E89FB5CA24E686A20004A2E7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E89FB5CB24E686A20004A2E7 /* rockerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockerIcon.png; sourceTree = "<group>"; };
+		E89FB5CC24E686A20004A2E7 /* textIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textIcon.png; sourceTree = "<group>"; };
+		E89FB5CD24E686A20004A2E7 /* bagIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bagIcon.png; sourceTree = "<group>"; };
+		E8ADFEC724FA518800E95E4C /* dokoniaruLanchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dokoniaruLanchScreen.png; path = whereIsItItem/dokoniaruLanchScreen.png; sourceTree = SOURCE_ROOT; };
+		E8ADFEC924FA547100E95E4C /* TextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextListViewController.swift; sourceTree = "<group>"; };
+		E8ADFECB24FA54F800E95E4C /* HomeTextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTextListViewController.swift; sourceTree = "<group>"; };
+		E8ADFECD24FA553E00E95E4C /* RockerListTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockerListTextViewController.swift; sourceTree = "<group>"; };
+		E8ADFECF24FA556500E95E4C /* BagTextListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTextListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FAEED889DB2AEEB914A272 /* Pods_whereIsIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23E23E572CC4A77ABE06CCF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52D0E739E378ED4B98ACCBE8 /* Pods-whereIsIt.debug.xcconfig */,
+				50E279F880401734E2C5D3EE /* Pods-whereIsIt.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3001F0FF94CCA9199D29E3FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E89FB58A24E686420004A2E7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,8 @@
 				E89FB5AE24E686430004A2E7 /* whereIsItTests */,
 				E89FB5B924E686430004A2E7 /* whereIsItUITests */,
 				E89FB59424E686420004A2E7 /* Products */,
+				23E23E572CC4A77ABE06CCF8 /* Pods */,
+				3001F0FF94CCA9199D29E3FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +145,20 @@
 		E89FB59524E686420004A2E7 /* whereIsIt */ = {
 			isa = PBXGroup;
 			children = (
+				E8ADFEC724FA518800E95E4C /* dokoniaruLanchScreen.png */,
+				E89FB5C824E686A20004A2E7 /* whereIsItItem */,
 				E89FB59624E686420004A2E7 /* AppDelegate.swift */,
 				E89FB59824E686420004A2E7 /* SceneDelegate.swift */,
-				E89FB59A24E686420004A2E7 /* FirstViewController.swift */,
-				E89FB59C24E686420004A2E7 /* SecondViewController.swift */,
 				E89FB59E24E686420004A2E7 /* Main.storyboard */,
 				E89FB5A124E686430004A2E7 /* Assets.xcassets */,
 				E89FB5A324E686430004A2E7 /* LaunchScreen.storyboard */,
 				E89FB5A624E686430004A2E7 /* Info.plist */,
+				E8ADFEC924FA547100E95E4C /* TextListViewController.swift */,
+				E8ADFECB24FA54F800E95E4C /* HomeTextListViewController.swift */,
+				E8ADFECD24FA553E00E95E4C /* RockerListTextViewController.swift */,
+				E8ADFECF24FA556500E95E4C /* BagTextListViewController.swift */,
+				E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */,
+				E851A9E62503A35E00AE5CF5 /* Realm.swift */,
 			);
 			path = whereIsIt;
 			sourceTree = "<group>";
@@ -131,6 +181,18 @@
 			path = whereIsItUITests;
 			sourceTree = "<group>";
 		};
+		E89FB5C824E686A20004A2E7 /* whereIsItItem */ = {
+			isa = PBXGroup;
+			children = (
+				E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */,
+				E89FB5CA24E686A20004A2E7 /* icon.png */,
+				E89FB5CB24E686A20004A2E7 /* rockerIcon.png */,
+				E89FB5CC24E686A20004A2E7 /* textIcon.png */,
+				E89FB5CD24E686A20004A2E7 /* bagIcon.png */,
+			);
+			path = whereIsItItem;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E89FB5BF24E686430004A2E7 /* Build configuration list for PBXNativeTarget "whereIsIt" */;
 			buildPhases = (
+				21733D107DFCA5DCCE37C8E5 /* [CP] Check Pods Manifest.lock */,
 				E89FB58F24E686420004A2E7 /* Sources */,
 				E89FB59024E686420004A2E7 /* Frameworks */,
 				E89FB59124E686420004A2E7 /* Resources */,
+				9744BEE9EBE3DF09B345E451 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,8 +300,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89FB5A524E686430004A2E7 /* LaunchScreen.storyboard in Resources */,
+				E89FB5D224E686A20004A2E7 /* bagIcon.png in Resources */,
+				E89FB5CF24E686A20004A2E7 /* icon.png in Resources */,
+				E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */,
+				E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */,
 				E89FB5A224E686430004A2E7 /* Assets.xcassets in Resources */,
 				E89FB5A024E686420004A2E7 /* Main.storyboard in Resources */,
+				E89FB5D124E686A20004A2E7 /* textIcon.png in Resources */,
+				E8ADFEC824FA518800E95E4C /* dokoniaruLanchScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,15 +327,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21733D107DFCA5DCCE37C8E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whereIsIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9744BEE9EBE3DF09B345E451 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-whereIsIt/Pods-whereIsIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-whereIsIt/Pods-whereIsIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-whereIsIt/Pods-whereIsIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E89FB58F24E686420004A2E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89FB59D24E686420004A2E7 /* SecondViewController.swift in Sources */,
-				E89FB59B24E686420004A2E7 /* FirstViewController.swift in Sources */,
+				E8ADFECC24FA54F800E95E4C /* HomeTextListViewController.swift in Sources */,
+				E8ADFECA24FA547100E95E4C /* TextListViewController.swift in Sources */,
+				E8ADFED024FA556500E95E4C /* BagTextListViewController.swift in Sources */,
+				E851A9E525036E6500AE5CF5 /* AddTextNameToListViewController.swift in Sources */,
 				E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */,
 				E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */,
+				E8ADFECE24FA553E00E95E4C /* RockerListTextViewController.swift in Sources */,
+				E851A9E72503A35E00AE5CF5 /* Realm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +552,7 @@
 		};
 		E89FB5C024E686430004A2E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52D0E739E378ED4B98ACCBE8 /* Pods-whereIsIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +570,7 @@
 		};
 		E89FB5C124E686430004A2E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E279F880401734E2C5D3EE /* Pods-whereIsIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
