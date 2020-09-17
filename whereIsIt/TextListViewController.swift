@@ -12,27 +12,29 @@ import RealmSwift
 class TextListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
-    var subjectNameArray = [String]()
-    var subjectNameArrays: Results<SubjectName>!
+//    var subjectNameArray = [String]()
+    var subjectNameArrays: Results<Subject>!
     
     let realm = try!Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
-        subjectNameArrays = realm.objects(SubjectName.self)
+        subjectNameArrays = realm.objects(Subject.self)
+        //subjectNameArrays = realm.objects(SubjectName.self)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
         //textNameArray = []
 
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subjectNameArray.count
+        return subjectNameArrays.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = subjectNameArray[indexPath.row]
+        cell?.textLabel?.text = subjectNameArrays[indexPath.row].name
         return cell!
     }
     
@@ -40,13 +42,17 @@ class TextListViewController: UIViewController, UITableViewDataSource {
         var uiTextField = UITextField()
         let ac = UIAlertController(title: "教科名を入力してください", message: "", preferredStyle: .alert)
         let aa = UIAlertAction(title: "OK", style: .default) { (action) in
-            self.subjectNameArray.append(uiTextField.text!)
-            try! realm.write {
-            realm.add(subjectNameArray)
+//            self.subjectNameArray.append(uiTextField.text!)
+            let subject = Subject()
+            subject.name = uiTextField.text!
+            
+            try! self.realm.write {
+                self.realm.add(subject)
             }
+            print(self.subjectNameArrays)
             self.table.reloadData()
-            print(self.subjectNameArray)
-            print(uiTextField.text!)
+//            print(self.subjectNameArray)
+//            print(uiTextField.text!)
             
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -61,6 +67,11 @@ class TextListViewController: UIViewController, UITableViewDataSource {
         present(ac, animated: true, completion: nil)
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+           // アクションを実装
+       }
     
 
     /*

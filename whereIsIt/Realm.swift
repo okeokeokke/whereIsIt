@@ -9,6 +9,17 @@
 import Foundation
 import RealmSwift
 
-class SubjectName: Object{
-    @objc dynamic var name: String = ""
+class Book: Object{
+    
+    @objc dynamic var textName: String = ""
+}
+
+class Subject: Object{
+    @objc dynamic var id = 0
+    @objc dynamic var name: String  = ""
+//    let books = List<Book>()
+    // idをプライマリキーに設定
+//    override static func primaryKey() -> String? {
+//        return "id"
+//    }
 }
