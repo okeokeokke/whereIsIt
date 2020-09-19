@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--教材一覧-->
+        <!--教科一覧-->
         <scene sceneID="pmb-gB-knX">
             <objects>
                 <viewController id="wme-7t-Unq" customClass="TextListViewController" customModule="whereIsIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Z8y-AT-c0h" kind="show" id="nQ4-ce-gOn"/>
+                                            <segue destination="Z8y-AT-c0h" kind="show" identifier="toBookListView" id="nQ4-ce-gOn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -37,8 +37,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Bxi-1v-Tv2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="教材一覧" selectedImage="textIcon" id="Jdf-P1-HD7"/>
-                    <navigationItem key="navigationItem" title="教材一覧" id="XpW-PH-gEc">
+                    <tabBarItem key="tabBarItem" title="教材追加" selectedImage="textIcon" id="Jdf-P1-HD7"/>
+                    <navigationItem key="navigationItem" title="教科一覧" id="XpW-PH-gEc">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="6kY-oa-VVz">
                             <connections>
                                 <action selector="onPlusButtonTapped:" destination="wme-7t-Unq" id="nj5-FE-zyt"/>
@@ -108,7 +108,6 @@
         <!--教材一覧-->
         <scene sceneID="LQ2-Oc-1hz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNq-Mx-uXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="AO6-Mh-7V1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="教材一覧" image="textIcon" selectedImage="textIcon" id="PKd-nQ-mpb">
                         <userDefinedRuntimeAttributes>
@@ -123,6 +122,7 @@
                         <segue destination="wme-7t-Unq" kind="relationship" relationship="rootViewController" id="q3b-22-puM"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNq-Mx-uXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="717" y="-631"/>
         </scene>

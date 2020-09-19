@@ -12,6 +12,7 @@ import RealmSwift
 class Book: Object{
     
     @objc dynamic var textName: String = ""
+    @objc dynamic var textSubjectName: String = ""
 }
 
 class Subject: Object{

@@ -9,18 +9,20 @@
 import UIKit
 import RealmSwift
 
-class TextListViewController: UIViewController, UITableViewDataSource {
+class TextListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table: UITableView!
 //    var subjectNameArray = [String]()
     var subjectNameArrays: Results<Subject>!
     
     let realm = try!Realm()
+    var selectedItem: Subject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         table.dataSource = self
         subjectNameArrays = realm.objects(Subject.self)
+        table.delegate = self
         //subjectNameArrays = realm.objects(SubjectName.self)
 //        print(Realm.Configuration.defaultConfiguration.fileURL!)
         //textNameArray = []
@@ -69,10 +71,23 @@ class TextListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("\(subjectNameArrays[indexPath.row])を選択")
+        selectedItem = subjectNameArrays[indexPath.row]
+        print("\(selectedItem)が受け渡される")
+        
     
            // アクションを実装
        }
     
+    func performSegueToBookList() {
+        performSegue(withIdentifier: "toBookListView", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBookListView" {
+            let bookViewController = segue.destination as! AddTextNameToListViewController
+            bookViewController.selectedItem = self.selectedItem
+        }
+    }
 
     /*
     // MARK: - Navigation

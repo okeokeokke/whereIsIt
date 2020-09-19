@@ -14,6 +14,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var table: UITableView!
 //    var textNameArray = [String]()
     var textNameArrays: Results<Book>!
+    var selectedItem: Subject!
     
     let realm = try!Realm()
 
@@ -25,6 +26,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
 
         // Do any additional setup after loading the view.
     }
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,17 +42,20 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
     @IBAction func onPlusButtonTapped(_ sender: Any) {
         var uiTextField = UITextField()
         let book = Book()
+        print("\(selectedItem)が受け渡された")
         let ac = UIAlertController(title: "教材名を入力してください", message: "", preferredStyle: .alert)
         let aa = UIAlertAction(title: "OK", style: .default) { (action) in
             //               self.textNameArray.append(uiTextField.text!)
+            book.textSubjectName = self.selectedItem.name
             book.textName = uiTextField.text!
+           
             try! self.realm.write {
                 self.realm.add(book)
-            }
-            
+            }            
             print(self.textNameArrays)
 //            print(uiTextField.text!)
             self.table.reloadData()
+            self.filter()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print(uiTextField.text!)
@@ -70,6 +75,18 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         //           }
         
     }
+
+    func filter() {
+        //データベース内に保存してあるPersonモデルを全て取得します。
+        var results = realm.objects(Book.self)
+        
+        //この時のresults内の要素の配列は不定です。
+        print("検索前", results)
+        //BookのtextSubjectName == selectedItemのname
+        results = results.filter("textSubjectName == '\(selectedItem.name)'")
+        print("検索後", results)
+    }
+    
     
 
     /*
