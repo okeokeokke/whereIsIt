@@ -22,6 +22,9 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         table.dataSource = self
         textNameArrays = realm.objects(Book.self)
+        textNameArrays = textNameArrays.filter("textSubjectName == '\(selectedItem.name)'")
+        print("検索後,viewDidRoad", self.textNameArrays)
+    
        
 
         // Do any additional setup after loading the view.
@@ -51,11 +54,13 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
            
             try! self.realm.write {
                 self.realm.add(book)
-            }            
+            }
+            self.textNameArrays = self.textNameArrays.filter("textSubjectName == '\(self.selectedItem.name)'")
             print(self.textNameArrays)
+            print("検索後,afterPlus", self.textNameArrays)
+            
 //            print(uiTextField.text!)
             self.table.reloadData()
-            self.filter()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print(uiTextField.text!)
@@ -85,6 +90,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         //BookのtextSubjectName == selectedItemのname
         results = results.filter("textSubjectName == '\(selectedItem.name)'")
         print("検索後", results)
+        
     }
     
     

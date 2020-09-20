@@ -70,10 +70,11 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
 //        print("\(subjectNameArrays[indexPath.row])を選択")
         selectedItem = subjectNameArrays[indexPath.row]
         print("\(selectedItem)が受け渡される")
+       
         
     
            // アクションを実装
@@ -84,8 +85,10 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBookListView" {
-            let bookViewController = segue.destination as! AddTextNameToListViewController
+            var bookViewController = segue.destination as! AddTextNameToListViewController
+            print("\(selectedItem)を受け渡す準備完了")
             bookViewController.selectedItem = self.selectedItem
+            
         }
     }
 

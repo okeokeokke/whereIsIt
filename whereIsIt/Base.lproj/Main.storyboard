@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Z8y-AT-c0h" kind="show" identifier="toBookListView" id="nQ4-ce-gOn"/>
+                                            <segue destination="Z8y-AT-c0h" kind="show" identifier="toBookListView" id="5OT-i1-Z2B"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
