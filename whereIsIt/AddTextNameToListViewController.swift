@@ -36,7 +36,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
            return textNameArrays.count
        }
        
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = textNameArrays[indexPath.row].textName
            return cell!
@@ -51,6 +51,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
             //               self.textNameArray.append(uiTextField.text!)
             book.textSubjectName = self.selectedItem.name
             book.textName = uiTextField.text!
+            book.status = "homeTextListView"
            
             try! self.realm.write {
                 self.realm.add(book)

@@ -13,10 +13,11 @@ class Book: Object{
     
     @objc dynamic var textName: String = ""
     @objc dynamic var textSubjectName: String = ""
+    @objc dynamic var status: String  = ""
 }
 
 class Subject: Object{
-    @objc dynamic var id = 0
+//    @objc dynamic var id = 0
     @objc dynamic var name: String  = ""
 //    let books = List<Book>()
     // idをプライマリキーに設定

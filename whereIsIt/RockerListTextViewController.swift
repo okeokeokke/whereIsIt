@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import RealmSwift
 
-class RockerListTextViewController: UIViewController {
+class RockerListTextViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let realm = try! Realm()
+    var textNameArrays: Results<Book>!
+    @IBOutlet var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.dataSource = self
+        table.delegate = self
+        textNameArrays = realm.objects(Book.self)
+        textNameArrays = textNameArrays.filter("status == 'rockerTextListView'")
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+//        print(textNameArrays)
+        table.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return textNameArrays.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        textNameArrays = textNameArrays.filter("status == 'rockerTextListView'")
+        print("検索後,tableView", self.textNameArrays)
+        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
+        return cell!
+    }
 
     /*
     // MARK: - Navigation
