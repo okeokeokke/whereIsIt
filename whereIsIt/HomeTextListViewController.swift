@@ -80,7 +80,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func toLocker() {
         print(selectedText,"chosen")
         for i in 0..<selectedText.count {
-            let text = textNameArrays[i]
+            let text = textNameArrays[selectedText[i]]
             try! self.realm.write {
                 text.status = "rockerTextListView"
                 self.realm.add(text)
@@ -95,7 +95,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func toBag() {
         print(selectedText,"chosen")
         for i in 0..<selectedText.count {
-            let text = textNameArrays[i]
+            let text = textNameArrays[selectedText[i]]
             print(text,"選択されたもの")
             try! self.realm.write {
                 text.status = "bagTextListView"
