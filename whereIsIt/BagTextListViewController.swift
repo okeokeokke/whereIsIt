@@ -78,6 +78,7 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBAction func toLocker() {
         print(selectedText,"chosen")
+        print(selectedText.count)
         for i in 0..<selectedText.count {
             let text = textNameArrays[selectedText[i]]
             try! self.realm.write {
@@ -90,10 +91,12 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         print("a")
         print(textNameArrays)
         table.reloadData()
+        selectedText = []
     }
     
     @IBAction func toHome() {
         print(selectedText,"chosen")
+        print(selectedText.count)
         for i in 0..<selectedText.count {
             let text = textNameArrays[selectedText[i]]
             print(text,"選択されたもの")
@@ -105,6 +108,7 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         print("selectedTextの配列の中身",selectedText)
         print(textNameArrays)
         table.reloadData()
+        selectedText = []
     }
     
     

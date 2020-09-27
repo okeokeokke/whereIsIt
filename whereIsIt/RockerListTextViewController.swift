@@ -77,6 +77,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBAction func toHome() {
         print(selectedText,"chosen")
+        print(selectedText.count)
         for i in 0..<selectedText.count {
             let text = textNameArrays[selectedText[i]]
             try! self.realm.write {
@@ -89,10 +90,12 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         print("a")
         print(textNameArrays)
         table.reloadData()
+        selectedText = []
     }
     
     @IBAction func toBag() {
         print(selectedText,"chosen")
+        print(selectedText.count)
         for i in 0..<selectedText.count {
             let text = textNameArrays[selectedText[i]]
             print(text,"選択されたもの")
@@ -104,6 +107,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         print("selectedTextの配列の中身",selectedText)
         print(textNameArrays)
         table.reloadData()
+        selectedText = []
     }
     
     /*
