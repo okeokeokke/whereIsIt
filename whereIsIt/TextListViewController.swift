@@ -51,7 +51,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
             try! self.realm.write {
                 self.realm.add(subject)
             }
-            print(self.subjectNameArrays)
+//            print(self.subjectNameArrays)
             self.table.reloadData()
 //            print(self.subjectNameArray)
 //            print(uiTextField.text!)
@@ -73,7 +73,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
 //        print("\(subjectNameArrays[indexPath.row])を選択")
         selectedItem = subjectNameArrays[indexPath.row]
-        print("\(selectedItem)が受け渡される")
+//        print("\(selectedItem)が受け渡される")
        
         
     
@@ -86,7 +86,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBookListView" {
             var bookViewController = segue.destination as! AddTextNameToListViewController
-            print("\(selectedItem)を受け渡す準備完了")
+//            print("\(selectedItem)を受け渡す準備完了")
             bookViewController.selectedItem = self.selectedItem
             
         }

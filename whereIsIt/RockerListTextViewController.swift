@@ -57,15 +57,22 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         if table.isEditing == isEditing {
             //        print("if動いている")
             selectedText.append(indexPath.row)
+            print("tableView内のselectedText",selectedText)
         }
         // 選択した行番号が出力される
-        print("選択された番号",indexPath.row)
-        print("実際に選択された値",textNameArrays[indexPath.row])
+//        print("選択された番号",indexPath.row)
+//        print("実際に選択された値",textNameArrays[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         // 選択解除した行番号が出力される
         print(indexPath.row)
+        if let firstIndex = selectedText.index(of: indexPath.row) {
+            print("インデックス番号: \(firstIndex)")
+            selectedText.remove(at: firstIndex)
+            print("削除後",selectedText)
+        }
+        
     }
     
     @IBAction func toHome() {
@@ -78,6 +85,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
                 print("b")
             }
         }
+        print("selectedTextの配列の中身",selectedText)
         print("a")
         print(textNameArrays)
         table.reloadData()
@@ -93,6 +101,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
                 self.realm.add(text)
             }
         }
+        print("selectedTextの配列の中身",selectedText)
         print(textNameArrays)
         table.reloadData()
     }
