@@ -48,7 +48,7 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         textNameArrays = textNameArrays.filter("status == 'bagTextListView'")
-        print("検索後,tableView", self.textNameArrays)
+//        print("検索後,tableView", self.textNameArrays)
         cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
         return cell!
     }
@@ -77,38 +77,37 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func toLocker() {
-        print(selectedText,"chosen")
-        print(selectedText.count)
+        var texts:[Book] = []
         for i in 0..<selectedText.count {
-            let text = textNameArrays[selectedText[i]]
-            try! self.realm.write {
-                text.status = "rockerTextListView"
-                self.realm.add(text)
-                print("b")
-            }
+            texts.append((textNameArrays[selectedText[i]]))
         }
-        print("selectedTextの配列の中身",selectedText)
-        print("a")
-        print(textNameArrays)
+        try! self.realm.write {
+            for i in 0..<selectedText.count {
+                texts[i].status = "rockerTextListView"
+            }
+            self.realm.add(texts)
+        }
+        
         table.reloadData()
         selectedText = []
+        texts = []
     }
     
     @IBAction func toHome() {
-        print(selectedText,"chosen")
-        print(selectedText.count)
+        var texts:[Book] = []
         for i in 0..<selectedText.count {
-            let text = textNameArrays[selectedText[i]]
-            print(text,"選択されたもの")
-            try! self.realm.write {
-                text.status = "homeTextListView"
-                self.realm.add(text)
-            }
+            texts.append((textNameArrays[selectedText[i]]))
         }
-        print("selectedTextの配列の中身",selectedText)
-        print(textNameArrays)
+        try! self.realm.write {
+            for i in 0..<selectedText.count {
+                texts[i].status = "homeTextListView"
+            }
+            self.realm.add(texts)
+        }
+        
         table.reloadData()
         selectedText = []
+        texts = []
     }
     
     

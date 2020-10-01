@@ -15,11 +15,13 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
     //    var textNameArray = [String]()
     var textNameArrays: Results<Book>!
     var selectedItem: Subject!
+   
     
     let realm = try!Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = selectedItem.name
         table.dataSource = self
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.filter("textSubjectName == '\(selectedItem.name)'")
@@ -29,6 +31,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         
         // Do any additional setup after loading the view.
     }
+    
     
     
     

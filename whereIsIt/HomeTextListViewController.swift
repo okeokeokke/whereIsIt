@@ -84,40 +84,53 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func toLocker() {
-        print(selectedText,"chosen")
-        print(selectedText.count)
+        var texts:[Book] = []
+//        print(selectedText,"chosen")
+//        print(textNameArrays,"TOの直前")
+//        print(selectedText.count)
         for i in 0..<selectedText.count {
-            let text = textNameArrays[selectedText[i]]
-            try! self.realm.write {
-                text.status = "rockerTextListView"
-                self.realm.add(text)
-                print("b")
-            }
+            texts.append((textNameArrays[selectedText[i]]))
         }
-        print("selectedTextの配列の中身",selectedText)
-        print("a")
-        print(textNameArrays)
+        try! self.realm.write {
+            for i in 0..<selectedText.count {
+                texts[i].status = "rockerTextListView"
+            }
+            self.realm.add(texts)
+        }
+        
+        
+//        print("selectedTextの配列の中身",selectedText)
+//        print("a")
+//        print(textNameArrays)
         table.reloadData()
         selectedText = []
+        texts = []
     }
     
     @IBAction func toBag() {
-        print(selectedText,"chosen")
-        print(textNameArrays)
-        print(selectedText.count)
+        var texts:[Book] = []
+//        print(selectedText,"chosen")
+//        print(textNameArrays,"TOの直前")
+//        print(selectedText.count)
         for i in 0..<selectedText.count {
-            let text = textNameArrays[selectedText[i]]
-            print(text,"選択されたもの")
-            try! self.realm.write {
-                text.status = "bagTextListView"
-                self.realm.add(text)
-            }
+            texts.append((textNameArrays[selectedText[i]]))
         }
-        print("selectedTextの配列の中身",selectedText)
-        print(textNameArrays)
+        try! self.realm.write {
+            for i in 0..<selectedText.count {
+                texts[i].status = "bagTextListView"
+            }
+            self.realm.add(texts)
+        }
+        
+//        print("selectedTextの配列の中身",selectedText)
+//        print(textNameArrays)
         table.reloadData()
         selectedText = []
+        texts = []
     }
+    
+    
+       
     
     
     
