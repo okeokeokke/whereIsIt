@@ -23,6 +23,7 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         table.delegate = self
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.filter("status == 'bagTextListView'")
+        textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
         

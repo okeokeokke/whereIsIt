@@ -25,6 +25,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         textNameArrays = realm.objects(Book.self)
         //        print("検索前,homeViewDidRoad", self.textNameArrays)
         textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
+        textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
         //        print("検索後,homeViewDidRoad", self.textNameArrays)
         //        print("ViewDidLoadが実行")
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする

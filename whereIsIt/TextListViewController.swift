@@ -74,11 +74,52 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
 //        print("\(subjectNameArrays[indexPath.row])を選択")
         selectedItem = subjectNameArrays[indexPath.row]
 //        print("\(selectedItem)が受け渡される")
-       
-        
-    
            // アクションを実装
        }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let alert: UIAlertController = UIAlertController(title: "注意", message: "教科名を削除するとその教科の教材も消えます", preferredStyle: .alert)
+        let canselAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
+                     print("キャンセル")
+                 }
+        let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .default) { (action) in
+                     // 「削除」が押された時の処理をここに記述
+            if editingStyle == UITableViewCell.EditingStyle.delete {
+                let subject = self.subjectNameArrays[indexPath.row]
+                var results  = self.realm.objects(Book.self)
+                results = results.filter("textSubjectName =  '\(subject.name)'")
+                do {
+                    let realm = try Realm()
+                    try! realm.write {
+                        realm.delete(results)
+                        realm.delete(subject)
+                        print(self.subjectNameArrays)
+                    }
+                } catch {
+                }
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+            }
+                     
+        }
+        alert.addAction(okAction)
+        alert.addAction(canselAction)
+        present(alert, animated: true, completion: nil)
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//            let subject = subjectNameArrays[indexPath.row]
+//            var results  = realm.objects(Book.self)
+//            results = results.filter("textSubjectName =  '\(subject.name)'")
+//            do {
+//                let realm = try Realm()
+//                try! realm.write {
+//                    realm.delete(results)
+//                    realm.delete(subject)
+//                    print(subjectNameArrays)
+//                }
+//            } catch {
+//            }
+//            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+//        }
+    }
     
     func performSegueToBookList() {
         performSegue(withIdentifier: "toBookListView", sender: nil)
@@ -86,11 +127,12 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBookListView" {
             var bookViewController = segue.destination as! AddTextNameToListViewController
-//            print("\(selectedItem)を受け渡す準備完了")
+            //            print("\(selectedItem)を受け渡す準備完了")
             bookViewController.selectedItem = self.selectedItem
             
         }
     }
+    
 
     /*
     // MARK: - Navigation

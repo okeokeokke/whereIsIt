@@ -45,6 +45,21 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            let text = textNameArrays[indexPath.row]
+            do {
+                let realm = try Realm()
+                try! realm.write {
+                    realm.delete(text)
+                    print(textNameArrays)
+                }
+            } catch {
+            }
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
     @IBAction func onPlusButtonTapped(_ sender: Any) {
         var uiTextField = UITextField()
         let book = Book()
