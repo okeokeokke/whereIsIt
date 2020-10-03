@@ -17,6 +17,9 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet var table: UITableView!
     @IBOutlet var toolbar: UIToolbar!
     var selectedText: [Int] = []
+    @IBOutlet var tagImage: UIImageView!
+    @IBOutlet var subjectLabel: UILabel!
+    @IBOutlet var textNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,8 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         //        print("ViewDidLoadが実行")
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
+        table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
+        table.rowHeight = 60
         
         //        textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
         //        print("検索後,homeViewDidRoad", self.textNameArrays)
@@ -55,10 +60,11 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell")
         textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
+        
         //        print("検索後,tableView", self.textNameArrays)
-        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
+//        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
         return cell!
     }
     

@@ -10,6 +10,8 @@
 		E5FAEED889DB2AEEB914A272 /* Pods_whereIsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */; };
 		E851A9E525036E6500AE5CF5 /* AddTextNameToListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */; };
 		E851A9E72503A35E00AE5CF5 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851A9E62503A35E00AE5CF5 /* Realm.swift */; };
+		E881AE532528951A00D804F3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE512528951900D804F3 /* TextTableViewCell.swift */; };
+		E881AE542528951A00D804F3 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881AE522528951900D804F3 /* TextTableViewCell.xib */; };
 		E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59624E686420004A2E7 /* AppDelegate.swift */; };
 		E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59824E686420004A2E7 /* SceneDelegate.swift */; };
 		E89FB5A024E686420004A2E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89FB59E24E686420004A2E7 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whereIsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextNameToListViewController.swift; sourceTree = "<group>"; };
 		E851A9E62503A35E00AE5CF5 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		E881AE512528951900D804F3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		E881AE522528951900D804F3 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		E89FB59324E686420004A2E7 /* whereIsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whereIsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89FB59624E686420004A2E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E89FB59824E686420004A2E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				E8ADFECF24FA556500E95E4C /* BagTextListViewController.swift */,
 				E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */,
 				E851A9E62503A35E00AE5CF5 /* Realm.swift */,
+				E881AE512528951900D804F3 /* TextTableViewCell.swift */,
+				E881AE522528951900D804F3 /* TextTableViewCell.xib */,
 			);
 			path = whereIsIt;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */,
 				E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */,
 				E89FB5A224E686430004A2E7 /* Assets.xcassets in Resources */,
+				E881AE542528951A00D804F3 /* TextTableViewCell.xib in Resources */,
 				E89FB5A024E686420004A2E7 /* Main.storyboard in Resources */,
 				E89FB5D124E686A20004A2E7 /* textIcon.png in Resources */,
 				E8ADFEC824FA518800E95E4C /* dokoniaruLanchScreen.png in Resources */,
@@ -374,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E881AE532528951A00D804F3 /* TextTableViewCell.swift in Sources */,
 				E8ADFECC24FA54F800E95E4C /* HomeTextListViewController.swift in Sources */,
 				E8ADFECA24FA547100E95E4C /* TextListViewController.swift in Sources */,
 				E8ADFED024FA556500E95E4C /* BagTextListViewController.swift in Sources */,
