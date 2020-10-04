@@ -17,9 +17,6 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet var table: UITableView!
     @IBOutlet var toolbar: UIToolbar!
     var selectedText: [Int] = []
-    @IBOutlet var tagImage: UIImageView!
-    @IBOutlet var subjectLabel: UILabel!
-    @IBOutlet var textNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,12 +57,13 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell") as! TextTableViewCell
         textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
-        
+        cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
+        cell.textNameLabel.text = String(textNameArrays[indexPath.row].textName)
         //        print("検索後,tableView", self.textNameArrays)
 //        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

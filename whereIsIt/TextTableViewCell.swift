@@ -24,9 +24,5 @@ class TextTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setSubjectName(_ name:String) {
-        self.subjectLabel.text = name
-        self.textNameLabel.text = name
-    }
     
 }
