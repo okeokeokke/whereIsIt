@@ -31,7 +31,8 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
         table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
-        table.rowHeight = 60
+        table.rowHeight = 50
+//        toolbar.isHidden = true
         
         //        textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
         //        print("検索後,homeViewDidRoad", self.textNameArrays)

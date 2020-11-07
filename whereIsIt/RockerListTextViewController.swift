@@ -27,7 +27,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
         table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
-        table.rowHeight = 60
+        table.rowHeight = 50
         
         // Do any additional setup after loading the view.
     }
