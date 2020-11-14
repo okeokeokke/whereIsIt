@@ -12,6 +12,11 @@ import RealmSwift
 class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var uiTextField: UITextField!
+    @IBOutlet var redButton: UIButton!
+    var r:Float!
+    var g:Float!
+    var b:Float!
+    
     
     let realm = try!Realm()
 
@@ -28,12 +33,22 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
         try! self.realm.write {
             self.realm.add(subject)
         }
+        print(subject)
+        let tabVc = self.presentingViewController as! UITabBarController
+        let navigationVc = tabVc.selectedViewController as! UINavigationController
+        let preVC = navigationVc.topViewController as! TextListViewController
+//        let preVC = self.presentingViewController as! TextListViewController
+         preVC.table.reloadData()
         self.dismiss(animated: true, completion: nil)
     
     }
     
     @IBAction func cancelButton() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func red() {
+        
     }
     
     

@@ -175,17 +175,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY8-Tz-DFp">
+                                <rect key="frame" x="-388" y="-117" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="redCircle.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-47-l6K">
+                                <rect key="frame" x="28" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="●">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="red" destination="Z8o-3g-fxg" eventType="touchUpInside" id="vA3-Rg-fzz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tZB-KY-H3I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Twq-Bb-Qbm"/>
                     <connections>
+                        <outlet property="redButton" destination="PZy-47-l6K" id="DJd-l5-HKf"/>
                         <outlet property="uiTextField" destination="kMZ-b7-JGL" id="nvg-aS-36g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLb-2o-3aa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="-1363"/>
+            <point key="canvasLocation" x="2102.898550724638" y="-1363.3928571428571"/>
         </scene>
         <!--教材編集-->
         <scene sceneID="LQ2-Oc-1hz">
@@ -469,10 +487,14 @@
     <resources>
         <image name="bagIcon" width="30" height="30"/>
         <image name="bookInHouseIcon" width="30" height="30"/>
+        <image name="redCircle.png" width="900" height="900"/>
         <image name="rockerIcon" width="30" height="30"/>
         <image name="textIcon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

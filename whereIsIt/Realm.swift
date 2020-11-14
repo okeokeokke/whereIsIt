@@ -19,9 +19,28 @@ class Book: Object{
 class Subject: Object{
 //    @objc dynamic var id = 0
     @objc dynamic var name: String  = ""
+    @objc dynamic var r:Float = 0.0
+    @objc dynamic var g:Float = 0.0
+    @objc dynamic var v:Float = 0.0
 //    let books = List<Book>()
     // idをプライマリキーに設定
 //    override static func primaryKey() -> String? {
 //        return "id"
 //    }
 }
+extension UIColor {
+    class func hex ( string : String, alpha : CGFloat) -> UIColor {
+        let string_ = string.replacingOccurrences(of: "#", with: "")
+        let scanner = Scanner(string: string_ as String)
+        var color: UInt32 = 0
+        if scanner.scanHexInt32(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            return UIColor(red:r,green:g,blue:b,alpha:alpha)
+        } else {
+            return UIColor.white;
+        }
+    }
+}
+//rgbのクラスを加える
