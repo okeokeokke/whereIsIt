@@ -29,6 +29,7 @@
 		E87D935525722AB900C5A594 /* tomatoCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934725722AB900C5A594 /* tomatoCircle.png */; };
 		E87D935625722AB900C5A594 /* blueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934825722AB900C5A594 /* blueCircle.png */; };
 		E87D93642572524900C5A594 /* TextNameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D93632572524900C5A594 /* TextNameListViewController.swift */; };
+		E87D936C257269F000C5A594 /* houseStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D936B257269EF00C5A594 /* houseStatus.png */; };
 		E881AE532528951A00D804F3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE512528951900D804F3 /* TextTableViewCell.swift */; };
 		E881AE542528951A00D804F3 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881AE522528951900D804F3 /* TextTableViewCell.xib */; };
 		E881AE6E2556AE8700D804F3 /* AddSubjectNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */; };
@@ -92,6 +93,7 @@
 		E87D934725722AB900C5A594 /* tomatoCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomatoCircle.png; sourceTree = "<group>"; };
 		E87D934825722AB900C5A594 /* blueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueCircle.png; sourceTree = "<group>"; };
 		E87D93632572524900C5A594 /* TextNameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNameListViewController.swift; sourceTree = "<group>"; };
+		E87D936B257269EF00C5A594 /* houseStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = houseStatus.png; sourceTree = "<group>"; };
 		E881AE512528951900D804F3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		E881AE522528951900D804F3 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectNamesViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		E89FB59524E686420004A2E7 /* whereIsIt */ = {
 			isa = PBXGroup;
 			children = (
+				E87D936B257269EF00C5A594 /* houseStatus.png */,
 				E87D933A25722AB900C5A594 /* colorButton */,
 				E84DE7E9255FE74700F2357D /* whereIsItMaterial2 */,
 				E8ADFEC724FA518800E95E4C /* dokoniaruLanchScreen.png */,
@@ -403,6 +406,7 @@
 				E87D935525722AB900C5A594 /* tomatoCircle.png in Resources */,
 				E87D935025722AB900C5A594 /* pinkCircle.png in Resources */,
 				E89FB5D124E686A20004A2E7 /* textIcon.png in Resources */,
+				E87D936C257269F000C5A594 /* houseStatus.png in Resources */,
 				E8ADFEC824FA518800E95E4C /* dokoniaruLanchScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

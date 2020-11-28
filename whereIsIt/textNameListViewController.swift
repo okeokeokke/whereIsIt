@@ -38,7 +38,9 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         subjectColorArray = subjectColorArray.filter("name == '"  + textNameArrays[indexPath.row].textSubjectName+"'")
         print(subjectColorArray)
         cell.subjectColor.image = UIImage(data: subjectColorArray[0].colorImage as! Data)
-        
+        if textNameArrays[indexPath.row].status == "homeTextListView" {
+            cell.tagImage.image = UIImage(named: "houseStatus.png")
+        }
         //        print("検索後,tableView", self.textNameArrays)
 //        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
         return cell
