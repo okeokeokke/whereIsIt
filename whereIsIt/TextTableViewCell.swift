@@ -13,6 +13,8 @@ class TextTableViewCell: UITableViewCell {
     @IBOutlet weak var tagImage: UIImageView!
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var textNameLabel: UILabel!
+    @IBOutlet weak var subjectColor: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

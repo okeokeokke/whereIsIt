@@ -29,6 +29,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
         //textNameArray = []
 
         // Do any additional setup after loading the view.
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -137,6 +138,11 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toBookListView", sender: nil)
+    }
+    
     
     
     

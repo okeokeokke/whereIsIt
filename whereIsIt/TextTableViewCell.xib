@@ -43,6 +43,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="subjectColor" destination="GOX-Hn-Dvi" id="sN8-vt-nUg"/>
                 <outlet property="subjectLabel" destination="NCJ-q2-FRE" id="ORE-5s-UHg"/>
                 <outlet property="tagImage" destination="gOA-Hs-Dyw" id="R8a-dH-lxM"/>
                 <outlet property="textNameLabel" destination="hBq-Vw-M7V" id="ku2-qb-cki"/>
