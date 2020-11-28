@@ -22,15 +22,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="h85-cA-zrS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="h85-cA-zrS" customClass="SubjectCustomTableViewCell" customModule="whereIsIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h85-cA-zrS" id="e5S-0R-bhg">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h85-cA-zrS" id="e5S-0R-bhg" customClass="SubjectCustomTableViewCell" customModule="whereIsIt" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Z8y-AT-c0h" kind="show" identifier="toBookListView" id="5OT-i1-Z2B"/>
+                                            <segue destination="Z8y-AT-c0h" kind="show" id="BR3-tm-lTQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -175,20 +175,122 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY8-Tz-DFp">
-                                <rect key="frame" x="-388" y="-117" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="redCircle.png"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-47-l6K">
-                                <rect key="frame" x="28" y="358" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fz-jA-1k4">
+                                <rect key="frame" x="102" y="358" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="●">
-                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-47-l6K">
+                                <rect key="frame" x="20" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="redCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="red" destination="Z8o-3g-fxg" eventType="touchUpInside" id="vA3-Rg-fzz"/>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="XT8-2q-yBa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-NY-qZF">
+                                <rect key="frame" x="102" y="436" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="pinkCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="2KH-zY-A4S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUD-u8-f0R">
+                                <rect key="frame" x="102" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="tomatoCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="0Jr-U8-3H7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-3n-Joo">
+                                <rect key="frame" x="182" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="tanCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="d0J-s6-6lz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-LX-TCN">
+                                <rect key="frame" x="344" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="blueCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="lZn-ta-ypx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Lr-6Ta">
+                                <rect key="frame" x="269" y="436" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="greenCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ZRS-Lr-rvj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-NU-fgE">
+                                <rect key="frame" x="269" y="358" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="purpleCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="AR9-oh-de2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbX-HG-srT">
+                                <rect key="frame" x="20" y="436" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="orangeCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="bCI-3o-KeH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-iW-Txb">
+                                <rect key="frame" x="182" y="436" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="yellowCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="6Z6-oc-ers"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxD-cH-cDS">
+                                <rect key="frame" x="344" y="436" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" backgroundImage="skyCircle">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ceR-86-iTq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -202,6 +304,28 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLb-2o-3aa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qH0-B7-pwG">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                    <state key="normal" backgroundImage="redCircle">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="V1g-cx-HQ0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="krj-vT-qjF">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                    <state key="normal" backgroundImage="redCircle">
+                        <color key="titleColor" systemColor="systemRedColor"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="rDk-qD-xfI"/>
+                    </connections>
+                </button>
             </objects>
             <point key="canvasLocation" x="2102.898550724638" y="-1363.3928571428571"/>
         </scene>
@@ -486,15 +610,27 @@
     </scenes>
     <resources>
         <image name="bagIcon" width="30" height="30"/>
+        <image name="blueCircle" width="900" height="900"/>
         <image name="bookInHouseIcon" width="30" height="30"/>
-        <image name="redCircle.png" width="900" height="900"/>
+        <image name="greenCircle" width="900" height="900"/>
+        <image name="orangeCircle" width="900" height="900"/>
+        <image name="pinkCircle" width="900" height="900"/>
+        <image name="purpleCircle" width="900" height="900"/>
+        <image name="redCircle" width="900" height="900"/>
         <image name="rockerIcon" width="30" height="30"/>
+        <image name="skyCircle" width="900" height="900"/>
+        <image name="tanCircle" width="900" height="900"/>
         <image name="textIcon" width="30" height="30"/>
+        <image name="tomatoCircle" width="900" height="900"/>
+        <image name="yellowCircle" width="900" height="900"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,10 +13,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var uiTextField: UITextField!
     @IBOutlet var redButton: UIButton!
-    var r:Float!
-    var g:Float!
-    var b:Float!
-    
+    var colorImage: UIImage?
     
     let realm = try!Realm()
 
@@ -30,6 +27,8 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     @IBAction func doneButton() {
         let subject = Subject()
         subject.name = uiTextField.text!
+        subject.colorImage = colorImage!.pngData() as Data?
+       
         try! self.realm.write {
             self.realm.add(subject)
         }
@@ -50,6 +49,12 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     @IBAction func red() {
         
     }
+    
+    @IBAction private func didTapNumberButton(_ sender: UIButton) {
+        colorImage = sender.currentBackgroundImage
+        print(type(of: colorImage))
+            
+        }
     
     
     

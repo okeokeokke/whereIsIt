@@ -23,6 +23,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
         table.dataSource = self
         subjectNameArrays = realm.objects(Subject.self)
         table.delegate = self
+        table.register(UINib(nibName: "SubjectCustomTableViewCell", bundle: nil),forCellReuseIdentifier:"subjectCustomTableViewCell")
         //subjectNameArrays = realm.objects(SubjectName.self)
 //        print(Realm.Configuration.defaultConfiguration.fileURL!)
         //textNameArray = []
@@ -35,9 +36,11 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = subjectNameArrays[indexPath.row].name
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "subjectCustomTableViewCell")as!SubjectCustomTableViewCell
+        cell.subjectLabel.text = subjectNameArrays[indexPath.row].name
+        print(type(of: subjectNameArrays[indexPath.row].colorImage))
+        cell.subjectColorImage.image = UIImage(data: subjectNameArrays[indexPath.row].colorImage as! Data)
+        return cell
     }
     
     @IBAction func onPlusButtonTapped(_ sender: Any) {
@@ -121,6 +124,8 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
 //        }
     }
     
+    
+    
     func performSegueToBookList() {
         performSegue(withIdentifier: "toBookListView", sender: nil)
     }
@@ -132,6 +137,8 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
     }
+    
+    
     
 
     /*

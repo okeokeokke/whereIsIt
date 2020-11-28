@@ -19,9 +19,10 @@ class Book: Object{
 class Subject: Object{
 //    @objc dynamic var id = 0
     @objc dynamic var name: String  = ""
-    @objc dynamic var r:Float = 0.0
-    @objc dynamic var g:Float = 0.0
-    @objc dynamic var v:Float = 0.0
+    @objc dynamic var colorImage: Data?
+//    @objc dynamic var r:Float = 0.0
+//    @objc dynamic var g:Float = 0.0
+//    @objc dynamic var b:Float = 0.0
 //    let books = List<Book>()
     // idをプライマリキーに設定
 //    override static func primaryKey() -> String? {
