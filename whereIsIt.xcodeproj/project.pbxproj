@@ -28,9 +28,9 @@
 		E87D935425722AB900C5A594 /* salmonCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934625722AB900C5A594 /* salmonCircle.png */; };
 		E87D935525722AB900C5A594 /* tomatoCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934725722AB900C5A594 /* tomatoCircle.png */; };
 		E87D935625722AB900C5A594 /* blueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934825722AB900C5A594 /* blueCircle.png */; };
+		E87D93642572524900C5A594 /* TextNameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D93632572524900C5A594 /* TextNameListViewController.swift */; };
 		E881AE532528951A00D804F3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE512528951900D804F3 /* TextTableViewCell.swift */; };
 		E881AE542528951A00D804F3 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881AE522528951900D804F3 /* TextTableViewCell.xib */; };
-		E881AE612529E4DB00D804F3 /* TextNameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE602529E4DB00D804F3 /* TextNameListViewController.swift */; };
 		E881AE6E2556AE8700D804F3 /* AddSubjectNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */; };
 		E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59624E686420004A2E7 /* AppDelegate.swift */; };
 		E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB59824E686420004A2E7 /* SceneDelegate.swift */; };
@@ -91,9 +91,9 @@
 		E87D934625722AB900C5A594 /* salmonCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmonCircle.png; sourceTree = "<group>"; };
 		E87D934725722AB900C5A594 /* tomatoCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomatoCircle.png; sourceTree = "<group>"; };
 		E87D934825722AB900C5A594 /* blueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueCircle.png; sourceTree = "<group>"; };
+		E87D93632572524900C5A594 /* TextNameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNameListViewController.swift; sourceTree = "<group>"; };
 		E881AE512528951900D804F3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		E881AE522528951900D804F3 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
-		E881AE602529E4DB00D804F3 /* TextNameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNameListViewController.swift; sourceTree = "<group>"; };
 		E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectNamesViewController.swift; sourceTree = "<group>"; };
 		E89FB59324E686420004A2E7 /* whereIsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whereIsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89FB59624E686420004A2E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,10 +234,10 @@
 				E851A9E62503A35E00AE5CF5 /* Realm.swift */,
 				E881AE512528951900D804F3 /* TextTableViewCell.swift */,
 				E881AE522528951900D804F3 /* TextTableViewCell.xib */,
-				E881AE602529E4DB00D804F3 /* TextNameListViewController.swift */,
 				E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */,
 				E87D93322569232100C5A594 /* SubjectCustomTableViewCell.swift */,
 				E87D93332569232100C5A594 /* SubjectCustomTableViewCell.xib */,
+				E87D93632572524900C5A594 /* TextNameListViewController.swift */,
 			);
 			path = whereIsIt;
 			sourceTree = "<group>";
@@ -478,8 +478,8 @@
 				E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */,
 				E881AE6E2556AE8700D804F3 /* AddSubjectNamesViewController.swift in Sources */,
 				E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */,
+				E87D93642572524900C5A594 /* TextNameListViewController.swift in Sources */,
 				E8ADFECE24FA553E00E95E4C /* RockerListTextViewController.swift in Sources */,
-				E881AE612529E4DB00D804F3 /* TextNameListViewController.swift in Sources */,
 				E87D93342569232100C5A594 /* SubjectCustomTableViewCell.swift in Sources */,
 				E851A9E72503A35E00AE5CF5 /* Realm.swift in Sources */,
 			);

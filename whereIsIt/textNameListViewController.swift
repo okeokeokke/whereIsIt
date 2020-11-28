@@ -1,11 +1,3 @@
-//
-//  TextNameListViewController.swift
-//  whereIsIt
-//
-//  Created by 桶本あいか on 2020/10/04.
-//  Copyright © 2020 Okemoto.Okke. All rights reserved.
-//
-
 import UIKit
 import RealmSwift
 
@@ -21,7 +13,7 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         table.delegate = self
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
-        table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
+        table.register(UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
         table.rowHeight = 50
 
         // Do any additional setup after loading the view.
@@ -57,3 +49,4 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
     */
 
 }
+
