@@ -13,9 +13,11 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         table.dataSource = self
         table.delegate = self
         textNameArrays = realm.objects(Book.self)
+        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
         textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
+        
         table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
-        table.rowHeight = 50
+        table.rowHeight = 40
         subjectArray = realm.objects(Subject.self)
 
         // Do any additional setup after loading the view.
@@ -40,10 +42,22 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         cell.subjectColor.image = UIImage(data: subjectColorArray[0].colorImage as! Data)
         if textNameArrays[indexPath.row].status == "homeTextListView" {
             cell.tagImage.image = UIImage(named: "houseStatus.png")
+        } else if textNameArrays[indexPath.row].status == "rockerTextListView" {
+            cell.tagImage.image = UIImage(named: "lockerStatus.png")
+        } else if textNameArrays[indexPath.row].status == "bagTextListView" {
+            cell.tagImage.image = UIImage(named: "bagStatus.png")
         }
-        //        print("検索後,tableView", self.textNameArrays)
-//        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
         return cell
+    }
+    
+    @IBAction func sortByStatus() {
+        textNameArrays = textNameArrays.sorted(byKeyPath: "subject", ascending: true)
+        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
+    }
+    
+    @IBAction func sortBySubject() {
+        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
+        textNameArrays = textNameArrays.sorted(byKeyPath: "subject", ascending: true)
     }
     
 

@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="2273.913043478261" y="-631.47321428571422"/>
         </scene>
-        <!--教材一覧-->
+        <!--Text Name List View Controller-->
         <scene sceneID="K7c-Qq-9PN">
             <objects>
                 <viewController id="RCG-Kl-2qT" customClass="TextNameListViewController" customModule="whereIsIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,11 +120,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="RtU-ck-Qd0">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="40" id="RtU-ck-Qd0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RtU-ck-Qd0" id="lRK-vp-R52">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -134,14 +134,17 @@
                         <viewLayoutGuide key="safeArea" id="61m-dG-Yg4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="教材一覧" id="RdU-dX-Ppq"/>
+                    <navigationItem key="navigationItem" id="59f-m1-cBx">
+                        <barButtonItem key="leftBarButtonItem" title="教科順" id="to1-ze-aXa"/>
+                        <barButtonItem key="rightBarButtonItem" title="場所順" id="nsv-9A-L74"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="4sc-2z-3K2" id="K60-mm-Bez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iq2-pS-k6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="-1363"/>
+            <point key="canvasLocation" x="1555.072463768116" y="-1363.3928571428571"/>
         </scene>
         <!--Add Subject Names View Controller-->
         <scene sceneID="PM7-Mx-Cij">
@@ -169,7 +172,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-b7-JGL">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="教科名" borderStyle="roundedRect" placeholder="教科名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-b7-JGL">
                                 <rect key="frame" x="159" y="168" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -327,7 +330,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2102.898550724638" y="-1363.3928571428571"/>
+            <point key="canvasLocation" x="3013.04347826087" y="-1363.3928571428571"/>
         </scene>
         <!--教材編集-->
         <scene sceneID="LQ2-Oc-1hz">
@@ -363,7 +366,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="nFL-yJ-AGB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="nFL-yJ-AGB" customClass="ListViewTextTableViewCell" customModule="whereIsIt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFL-yJ-AGB" id="HeQ-5e-SBL">
@@ -539,7 +542,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="RCG-Kl-2qT" kind="relationship" relationship="viewControllers" id="2pb-0M-Liy"/>
+                        <segue destination="nKn-cf-fJu" kind="relationship" relationship="viewControllers" id="2pb-0M-Liy"/>
                         <segue destination="AO6-Mh-7V1" kind="relationship" relationship="viewControllers" id="Ps0-Zq-TJE"/>
                         <segue destination="w1R-Qc-pXu" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="pNT-7K-PtC" kind="relationship" relationship="viewControllers" id="G1h-ci-h98"/>
@@ -606,6 +609,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aB7-tJ-Qcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="1841.5178571428571"/>
+        </scene>
+        <!--教材一覧-->
+        <scene sceneID="lCZ-kH-dDH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nKn-cf-fJu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="教材一覧" id="RdU-dX-Ppq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HPb-CO-huy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RCG-Kl-2qT" kind="relationship" relationship="rootViewController" id="goV-SM-K81"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AK-vk-kOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644.92753623188412" y="-1363.3928571428571"/>
         </scene>
     </scenes>
     <resources>

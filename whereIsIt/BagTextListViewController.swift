@@ -26,8 +26,9 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
-        table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
-        table.rowHeight = 50
+        table.register(UINib(nibName: "ListViewTextTableViewCell", bundle: nil),forCellReuseIdentifier:"listViewTextCustomCell")
+        table.rowHeight = 40
+        toolbar.isHidden = true
         
         // Do any additional setup after loading the view.
     }
@@ -39,8 +40,13 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func setEditing(_ editing: Bool, animated: Bool) {
        super.setEditing(editing, animated: animated)
-       table.isEditing = editing
-       toolbar.isHidden = false
+        if(self.isEditing){
+            table.isEditing = editing
+            toolbar.isHidden = false
+        }else{
+        toolbar.isHidden = true
+            
+        }
     }
     
     
@@ -49,10 +55,13 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell") as! TextTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listViewTextCustomCell") as! ListViewTextTableViewCell
+        var subjectColorArray = realm.objects(Subject.self)
         textNameArrays = textNameArrays.filter("status == 'bagTextListView'")
         cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
         cell.textNameLabel.text = String(textNameArrays[indexPath.row].textName)
+        subjectColorArray = subjectColorArray.filter("name == '"  + textNameArrays[indexPath.row].textSubjectName+"'")
+        cell.subjectColor.image = UIImage(data: subjectColorArray[0].colorImage as! Data)
 //        print("検索後,tableView", self.textNameArrays)
 //        cell?.textLabel?.text = "\(textNameArrays[indexPath.row].textSubjectName)" + " " +  "\(textNameArrays[indexPath.row].textName)"
         return cell

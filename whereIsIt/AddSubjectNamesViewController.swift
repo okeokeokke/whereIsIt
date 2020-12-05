@@ -20,9 +20,13 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiTextField.delegate = self
+        colorImage = UIImage(named: "redCircle.png")
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
     @IBAction func doneButton() {
         let subject = Subject()

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E5FAEED889DB2AEEB914A272 /* Pods_whereIsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */; };
+		E84A2A5C257B8329000586AA /* AddTextNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84A2A5A257B8329000586AA /* AddTextNameTableViewCell.swift */; };
+		E84A2A5D257B8329000586AA /* AddTextNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84A2A5B257B8329000586AA /* AddTextNameTableViewCell.xib */; };
 		E84DE7EB255FE74700F2357D /* redCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E84DE7EA255FE74700F2357D /* redCircle.png */; };
 		E84DE7F3255FE8EB00F2357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84DE7F2255FE8EB00F2357D /* Assets.xcassets */; };
 		E851A9E525036E6500AE5CF5 /* AddTextNameToListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */; };
@@ -30,6 +32,10 @@
 		E87D935625722AB900C5A594 /* blueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D934825722AB900C5A594 /* blueCircle.png */; };
 		E87D93642572524900C5A594 /* TextNameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D93632572524900C5A594 /* TextNameListViewController.swift */; };
 		E87D936C257269F000C5A594 /* houseStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D936B257269EF00C5A594 /* houseStatus.png */; };
+		E87D9372257602DA00C5A594 /* lockerStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D9370257602DA00C5A594 /* lockerStatus.png */; };
+		E87D9373257602DA00C5A594 /* bagStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D9371257602DA00C5A594 /* bagStatus.png */; };
+		E87D9379257B658900C5A594 /* ListViewTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D9377257B658900C5A594 /* ListViewTextTableViewCell.swift */; };
+		E87D937A257B658900C5A594 /* ListViewTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E87D9378257B658900C5A594 /* ListViewTextTableViewCell.xib */; };
 		E881AE532528951A00D804F3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE512528951900D804F3 /* TextTableViewCell.swift */; };
 		E881AE542528951A00D804F3 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E881AE522528951900D804F3 /* TextTableViewCell.xib */; };
 		E881AE6E2556AE8700D804F3 /* AddSubjectNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */; };
@@ -72,6 +78,8 @@
 		50E279F880401734E2C5D3EE /* Pods-whereIsIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsIt.release.xcconfig"; path = "Target Support Files/Pods-whereIsIt/Pods-whereIsIt.release.xcconfig"; sourceTree = "<group>"; };
 		52D0E739E378ED4B98ACCBE8 /* Pods-whereIsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsIt.debug.xcconfig"; path = "Target Support Files/Pods-whereIsIt/Pods-whereIsIt.debug.xcconfig"; sourceTree = "<group>"; };
 		A83649E29B4BC4F626171B6E /* Pods_whereIsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whereIsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84A2A5A257B8329000586AA /* AddTextNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextNameTableViewCell.swift; sourceTree = "<group>"; };
+		E84A2A5B257B8329000586AA /* AddTextNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTextNameTableViewCell.xib; sourceTree = "<group>"; };
 		E84DE7EA255FE74700F2357D /* redCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redCircle.png; sourceTree = "<group>"; };
 		E84DE7F2255FE8EB00F2357D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E851A9E425036E6500AE5CF5 /* AddTextNameToListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextNameToListViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,10 @@
 		E87D934825722AB900C5A594 /* blueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueCircle.png; sourceTree = "<group>"; };
 		E87D93632572524900C5A594 /* TextNameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNameListViewController.swift; sourceTree = "<group>"; };
 		E87D936B257269EF00C5A594 /* houseStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = houseStatus.png; sourceTree = "<group>"; };
+		E87D9370257602DA00C5A594 /* lockerStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lockerStatus.png; sourceTree = "<group>"; };
+		E87D9371257602DA00C5A594 /* bagStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bagStatus.png; sourceTree = "<group>"; };
+		E87D9377257B658900C5A594 /* ListViewTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTextTableViewCell.swift; sourceTree = "<group>"; };
+		E87D9378257B658900C5A594 /* ListViewTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewTextTableViewCell.xib; sourceTree = "<group>"; };
 		E881AE512528951900D804F3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		E881AE522528951900D804F3 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		E881AE6D2556AE8700D804F3 /* AddSubjectNamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectNamesViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +230,8 @@
 		E89FB59524E686420004A2E7 /* whereIsIt */ = {
 			isa = PBXGroup;
 			children = (
+				E87D9371257602DA00C5A594 /* bagStatus.png */,
+				E87D9370257602DA00C5A594 /* lockerStatus.png */,
 				E87D936B257269EF00C5A594 /* houseStatus.png */,
 				E87D933A25722AB900C5A594 /* colorButton */,
 				E84DE7E9255FE74700F2357D /* whereIsItMaterial2 */,
@@ -241,6 +255,10 @@
 				E87D93322569232100C5A594 /* SubjectCustomTableViewCell.swift */,
 				E87D93332569232100C5A594 /* SubjectCustomTableViewCell.xib */,
 				E87D93632572524900C5A594 /* TextNameListViewController.swift */,
+				E87D9377257B658900C5A594 /* ListViewTextTableViewCell.swift */,
+				E87D9378257B658900C5A594 /* ListViewTextTableViewCell.xib */,
+				E84A2A5A257B8329000586AA /* AddTextNameTableViewCell.swift */,
+				E84A2A5B257B8329000586AA /* AddTextNameTableViewCell.xib */,
 			);
 			path = whereIsIt;
 			sourceTree = "<group>";
@@ -384,16 +402,20 @@
 				E84DE7EB255FE74700F2357D /* redCircle.png in Resources */,
 				E87D934C25722AB900C5A594 /* yellowCircle.png in Resources */,
 				E89FB5A524E686430004A2E7 /* LaunchScreen.storyboard in Resources */,
+				E87D9372257602DA00C5A594 /* lockerStatus.png in Resources */,
 				E87D934E25722AB900C5A594 /* tanCircle.png in Resources */,
 				E87D934D25722AB900C5A594 /* plumCircle.png in Resources */,
+				E87D9373257602DA00C5A594 /* bagStatus.png in Resources */,
 				E87D934B25722AB900C5A594 /* greenCircle.png in Resources */,
 				E84DE7F3255FE8EB00F2357D /* Assets.xcassets in Resources */,
 				E87D935425722AB900C5A594 /* salmonCircle.png in Resources */,
 				E87D935225722AB900C5A594 /* orangeCircle.png in Resources */,
 				E87D934A25722AB900C5A594 /* purpleCircle.png in Resources */,
 				E87D934F25722AB900C5A594 /* skyCircle.png in Resources */,
+				E84A2A5D257B8329000586AA /* AddTextNameTableViewCell.xib in Resources */,
 				E89FB5D224E686A20004A2E7 /* bagIcon.png in Resources */,
 				E87D935125722AB900C5A594 /* aquaCircle.png in Resources */,
+				E87D937A257B658900C5A594 /* ListViewTextTableViewCell.xib in Resources */,
 				E89FB5CF24E686A20004A2E7 /* icon.png in Resources */,
 				E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */,
 				E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */,
@@ -479,11 +501,13 @@
 				E8ADFECA24FA547100E95E4C /* TextListViewController.swift in Sources */,
 				E8ADFED024FA556500E95E4C /* BagTextListViewController.swift in Sources */,
 				E851A9E525036E6500AE5CF5 /* AddTextNameToListViewController.swift in Sources */,
+				E87D9379257B658900C5A594 /* ListViewTextTableViewCell.swift in Sources */,
 				E89FB59724E686420004A2E7 /* AppDelegate.swift in Sources */,
 				E881AE6E2556AE8700D804F3 /* AddSubjectNamesViewController.swift in Sources */,
 				E89FB59924E686420004A2E7 /* SceneDelegate.swift in Sources */,
 				E87D93642572524900C5A594 /* TextNameListViewController.swift in Sources */,
 				E8ADFECE24FA553E00E95E4C /* RockerListTextViewController.swift in Sources */,
+				E84A2A5C257B8329000586AA /* AddTextNameTableViewCell.swift in Sources */,
 				E87D93342569232100C5A594 /* SubjectCustomTableViewCell.swift in Sources */,
 				E851A9E72503A35E00AE5CF5 /* Realm.swift in Sources */,
 			);

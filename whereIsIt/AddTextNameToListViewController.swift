@@ -25,7 +25,9 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         table.dataSource = self
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.filter("textSubjectName == '\(selectedItem.name)'")
+        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
         print("検索後,viewDidRoad", self.textNameArrays)
+        table.register(UINib(nibName: "AddTextNameTableViewCell", bundle: nil),forCellReuseIdentifier:"addTextNameTableViewCell")
         
         
         
@@ -40,9 +42,17 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = textNameArrays[indexPath.row].textName
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "addTextNameTableViewCell") as! AddTextNameTableViewCell
+        cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
+        cell.textNameLabel.text = String(textNameArrays[indexPath.row].textName)
+        if textNameArrays[indexPath.row].status == "homeTextListView" {
+            cell.tagImage.image = UIImage(named: "houseStatus.png")
+        } else if textNameArrays[indexPath.row].status == "rockerTextListView" {
+            cell.tagImage.image = UIImage(named: "lockerStatus.png")
+        } else if textNameArrays[indexPath.row].status == "bagTextListView" {
+            cell.tagImage.image = UIImage(named: "bagStatus.png")
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
