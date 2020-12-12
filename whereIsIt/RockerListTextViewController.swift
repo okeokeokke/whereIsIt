@@ -27,7 +27,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
         table.register(UINib(nibName: "ListViewTextTableViewCell", bundle: nil),forCellReuseIdentifier:"listViewTextCustomCell")
-        table.rowHeight = 40
+//        table.rowHeight = 40
         toolbar.isHidden = true
         
         // Do any additional setup after loading the view.
@@ -96,6 +96,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         try! self.realm.write {
             for i in 0..<selectedText.count {
                 texts[i].status = "homeTextListView"
+                texts[i].statusNumber = 0
             }
             self.realm.add(texts)
         }
@@ -113,6 +114,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
         try! self.realm.write {
             for i in 0..<selectedText.count {
                 texts[i].status = "bagTextListView"
+                texts[i].statusNumber = 2
             }
             self.realm.add(texts)
         }

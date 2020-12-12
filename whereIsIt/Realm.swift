@@ -14,6 +14,8 @@ class Book: Object{
     @objc dynamic var textName: String = ""
     @objc dynamic var textSubjectName: String = ""
     @objc dynamic var status: String  = ""
+    @objc dynamic var statusNumber: Int = 0
+    
 }
 
 class Subject: Object{

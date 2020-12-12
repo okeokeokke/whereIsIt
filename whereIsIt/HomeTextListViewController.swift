@@ -31,7 +31,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         //        print("ViewDidLoadが実行")
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
-        table.rowHeight = 40
+//        table.rowHeight = 40
         toolbar.isHidden = true
         
         //        textNameArrays = textNameArrays.filter("status == 'homeTextListView'")
@@ -109,6 +109,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         try! self.realm.write {
             for i in 0..<selectedText.count {
                 texts[i].status = "rockerTextListView"
+                texts[i].statusNumber = 1
             }
             self.realm.add(texts)
         }
@@ -133,6 +134,7 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         try! self.realm.write {
             for i in 0..<selectedText.count {
                 texts[i].status = "bagTextListView"
+                texts[i].statusNumber = 2
             }
             self.realm.add(texts)
         }

@@ -13,11 +13,11 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         table.dataSource = self
         table.delegate = self
         textNameArrays = realm.objects(Book.self)
-        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
+        textNameArrays = textNameArrays.sorted(byKeyPath: "statusNumber", ascending: true)
         textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
         
         table.register(UINib(nibName: "TextTableViewCell", bundle: nil),forCellReuseIdentifier:"customTableViewCell")
-        table.rowHeight = 40
+//        table.rowHeight = 40
         subjectArray = realm.objects(Subject.self)
 
         // Do any additional setup after loading the view.

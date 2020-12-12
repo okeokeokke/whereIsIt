@@ -25,9 +25,12 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         table.dataSource = self
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.filter("textSubjectName == '\(selectedItem.name)'")
-        textNameArrays = textNameArrays.sorted(byKeyPath: "status", ascending: true)
+        textNameArrays = textNameArrays.sorted(byKeyPath: "statusNumber", ascending: true)
         print("検索後,viewDidRoad", self.textNameArrays)
         table.register(UINib(nibName: "AddTextNameTableViewCell", bundle: nil),forCellReuseIdentifier:"addTextNameTableViewCell")
+        let view = UIView(frame: CGRect(x: 0, y: 0,
+                              width: 100, height: 30))
+        let item = UIBarButtonItem(customView: view)
         
         
         
@@ -43,7 +46,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addTextNameTableViewCell") as! AddTextNameTableViewCell
-        cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
+//        cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
         cell.textNameLabel.text = String(textNameArrays[indexPath.row].textName)
         if textNameArrays[indexPath.row].status == "homeTextListView" {
             cell.tagImage.image = UIImage(named: "houseStatus.png")
@@ -121,6 +124,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         print("検索後", results)
         
     }
+    
     
     
     

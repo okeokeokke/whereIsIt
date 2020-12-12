@@ -21,6 +21,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         uiTextField.delegate = self
         colorImage = UIImage(named: "redCircle.png")
+        uiTextField.clearButtonMode = .unlessEditing
         
 
         // Do any additional setup after loading the view.
