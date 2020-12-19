@@ -122,9 +122,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         //BookのtextSubjectName == selectedItemのname
         results = results.filter("textSubjectName == '\(selectedItem.name)'")
         print("検索後", results)
-        
     }
-    
     
     
     

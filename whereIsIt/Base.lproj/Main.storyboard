@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-tL-xbv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Xi-tL-xbv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="h85-cA-zrS" customClass="SubjectCustomTableViewCell" customModule="whereIsIt" customModuleProvider="target">
@@ -38,6 +37,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bxi-1v-Tv2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Xi-tL-xbv" firstAttribute="top" secondItem="Bxi-1v-Tv2" secondAttribute="top" id="908-cO-v4p"/>
+                            <constraint firstItem="4Xi-tL-xbv" firstAttribute="trailing" secondItem="Bxi-1v-Tv2" secondAttribute="trailing" id="C64-ts-nbH"/>
+                            <constraint firstItem="4Xi-tL-xbv" firstAttribute="leading" secondItem="Bxi-1v-Tv2" secondAttribute="leading" id="T13-UH-eSj"/>
+                            <constraint firstItem="4Xi-tL-xbv" firstAttribute="bottom" secondItem="Bxi-1v-Tv2" secondAttribute="bottom" id="TRi-02-8Qm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="教材編集" selectedImage="textIcon" id="Jdf-P1-HD7"/>
                     <navigationItem key="navigationItem" title="教科一覧" id="XpW-PH-gEc">
@@ -64,18 +69,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tOU-SM-cnO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="aAw-rm-ZTA">
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="kUO-TZ-Ugz"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJn-pO-SuV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJn-pO-SuV">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6Kb-ag-ASB">
@@ -91,6 +86,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Omx-4Z-WgR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JJn-pO-SuV" firstAttribute="bottom" secondItem="Omx-4Z-WgR" secondAttribute="bottom" id="0g5-xq-syH"/>
+                            <constraint firstItem="JJn-pO-SuV" firstAttribute="trailing" secondItem="Omx-4Z-WgR" secondAttribute="trailing" id="8pe-Hh-gWW"/>
+                            <constraint firstItem="JJn-pO-SuV" firstAttribute="leading" secondItem="Omx-4Z-WgR" secondAttribute="leading" id="LWs-js-Xp0"/>
+                            <constraint firstItem="JJn-pO-SuV" firstAttribute="top" secondItem="Omx-4Z-WgR" secondAttribute="top" id="lGh-Ze-Wwf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6lf-19-Hs1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3EC-7w-dFR">
@@ -115,9 +116,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-2z-3K2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="811"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-2z-3K2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="40" id="RtU-ck-Qd0">
@@ -133,10 +133,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="61m-dG-Yg4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4sc-2z-3K2" firstAttribute="trailing" secondItem="61m-dG-Yg4" secondAttribute="trailing" id="JLf-Vr-duu"/>
+                            <constraint firstItem="61m-dG-Yg4" firstAttribute="bottom" secondItem="4sc-2z-3K2" secondAttribute="bottom" id="jTy-M0-uJw"/>
+                            <constraint firstItem="4sc-2z-3K2" firstAttribute="top" secondItem="61m-dG-Yg4" secondAttribute="top" id="raz-2b-lPm"/>
+                            <constraint firstItem="4sc-2z-3K2" firstAttribute="leading" secondItem="61m-dG-Yg4" secondAttribute="leading" id="wnx-ld-GhK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="59f-m1-cBx">
-                        <barButtonItem key="leftBarButtonItem" title="教科順" id="to1-ze-aXa"/>
-                        <barButtonItem key="rightBarButtonItem" title="場所順" id="nsv-9A-L74"/>
+                        <barButtonItem key="leftBarButtonItem" title="教科順" id="to1-ze-aXa">
+                            <connections>
+                                <action selector="sortBySubject" destination="RCG-Kl-2qT" id="OPn-TI-ItU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="場所順" id="nsv-9A-L74">
+                            <connections>
+                                <action selector="sortByStatus" destination="RCG-Kl-2qT" id="53K-4g-8Ng"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="4sc-2z-3K2" id="K60-mm-Bez"/>
@@ -154,9 +168,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ok3-hc-TRC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ok3-hc-TRC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="教科名追加" id="Xid-Oj-JEh">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gqf-g2-DNk">
@@ -172,129 +185,178 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="教科名" borderStyle="roundedRect" placeholder="教科名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-b7-JGL">
-                                <rect key="frame" x="159" y="168" width="97" height="34"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="eNN-ag-Hsd">
+                                <rect key="frame" x="20" y="602" width="350" height="50"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSx-FA-DPG">
+                                <rect key="frame" x="75" y="494" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mX2-Vq-w04">
+                                        <rect key="frame" x="-55" y="39" width="350" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-47-l6K">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PZy-47-l6K" secondAttribute="height" multiplier="1:1" id="hDp-nA-YCV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="redCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="XT8-2q-yBa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUD-u8-f0R" userLabel="tomato">
+                                                <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uUD-u8-f0R" secondAttribute="height" multiplier="1:1" id="TJn-Rg-uoq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="tomatoCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="0Jr-U8-3H7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-3n-Joo" userLabel="tan">
+                                                <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PC1-3n-Joo" secondAttribute="height" multiplier="1:1" id="505-g2-eK8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="tanCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="d0J-s6-6lz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-NU-fgE" userLabel="purple">
+                                                <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qvf-NU-fgE" secondAttribute="height" multiplier="1:1" id="ikI-Bj-7O8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="purpleCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="AR9-oh-de2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-LX-TCN" userLabel="blue">
+                                                <rect key="frame" x="300" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CAS-LX-TCN" secondAttribute="height" multiplier="1:1" id="HHX-d6-4HF"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="blueCircle"/>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="lZn-ta-ypx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mX2-Vq-w04" secondAttribute="height" multiplier="7:1" id="Eko-6d-wmr"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-R7-nP2">
+                                        <rect key="frame" x="-55" y="39" width="350" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbX-HG-srT" userLabel="orange">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="jbX-HG-srT" secondAttribute="height" multiplier="1:1" id="VRX-1o-5m0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="orangeCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="bCI-3o-KeH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-NY-qZF" userLabel="pink">
+                                                <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="F5z-NY-qZF" secondAttribute="height" multiplier="1:1" id="kcM-lo-qZh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="pinkCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="2KH-zY-A4S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-iW-Txb" userLabel="yellow">
+                                                <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EhR-iW-Txb" secondAttribute="height" multiplier="1:1" id="UvP-7j-IT9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="yellowCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="6Z6-oc-ers"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Lr-6Ta" userLabel="green">
+                                                <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mdH-Lr-6Ta" secondAttribute="height" multiplier="1:1" id="1Wj-vg-LXJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="greenCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ZRS-Lr-rvj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxD-cH-cDS" userLabel="sky">
+                                                <rect key="frame" x="300" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cxD-cH-cDS" secondAttribute="height" multiplier="1:1" id="uq1-G9-W4k"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" backgroundImage="skyCircle">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ceR-86-iTq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="g9Y-R7-nP2" secondAttribute="height" multiplier="7:1" id="4X1-8v-ydE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="教科名" borderStyle="roundedRect" placeholder="教科名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-b7-JGL">
+                                <rect key="frame" x="171.5" y="181" width="71" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="evR-qA-SKF">
-                                <rect key="frame" x="152" y="321" width="110" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZy-47-l6K">
-                                <rect key="frame" x="20" y="358" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="redCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="XT8-2q-yBa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5z-NY-qZF" userLabel="pink">
-                                <rect key="frame" x="102" y="436" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="pinkCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="2KH-zY-A4S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUD-u8-f0R" userLabel="tomato">
-                                <rect key="frame" x="102" y="358" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="tomatoCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="0Jr-U8-3H7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC1-3n-Joo" userLabel="tan">
-                                <rect key="frame" x="182" y="358" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="tanCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="d0J-s6-6lz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-LX-TCN">
-                                <rect key="frame" x="344" y="358" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="blueCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="lZn-ta-ypx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Lr-6Ta">
-                                <rect key="frame" x="269" y="436" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="greenCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ZRS-Lr-rvj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-NU-fgE">
-                                <rect key="frame" x="269" y="358" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="purpleCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="AR9-oh-de2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbX-HG-srT">
-                                <rect key="frame" x="20" y="436" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="orangeCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="bCI-3o-KeH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-iW-Txb">
-                                <rect key="frame" x="182" y="436" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="yellowCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="6Z6-oc-ers"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxD-cH-cDS">
-                                <rect key="frame" x="344" y="436" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" backgroundImage="skyCircle">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNumberButton:" destination="Z8o-3g-fxg" eventType="touchUpInside" id="ceR-86-iTq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tZB-KY-H3I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kMZ-b7-JGL" firstAttribute="top" secondItem="Ok3-hc-TRC" secondAttribute="bottom" constant="125" id="D9D-UK-UMt"/>
+                            <constraint firstItem="eNN-ag-Hsd" firstAttribute="leading" secondItem="tZB-KY-H3I" secondAttribute="leading" constant="32" id="Mx4-qh-RY8"/>
+                            <constraint firstItem="eNN-ag-Hsd" firstAttribute="centerX" secondItem="cez-FN-F1W" secondAttribute="centerX" id="PGp-GV-949"/>
+                            <constraint firstItem="Ok3-hc-TRC" firstAttribute="leading" secondItem="tZB-KY-H3I" secondAttribute="leading" id="X17-hi-cdR"/>
+                            <constraint firstItem="tZB-KY-H3I" firstAttribute="trailing" secondItem="eNN-ag-Hsd" secondAttribute="trailing" constant="32" id="aYU-tR-qR5"/>
+                            <constraint firstItem="Ok3-hc-TRC" firstAttribute="top" secondItem="tZB-KY-H3I" secondAttribute="top" id="hfW-Zz-B0k"/>
+                            <constraint firstItem="Ok3-hc-TRC" firstAttribute="trailing" secondItem="tZB-KY-H3I" secondAttribute="trailing" id="nOc-jB-1Id"/>
+                            <constraint firstItem="kMZ-b7-JGL" firstAttribute="centerX" secondItem="cez-FN-F1W" secondAttribute="centerX" id="r9E-3e-tGY"/>
+                            <constraint firstItem="eNN-ag-Hsd" firstAttribute="top" secondItem="kMZ-b7-JGL" secondAttribute="bottom" constant="125" id="wBv-fA-d3s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Twq-Bb-Qbm"/>
                     <connections>
@@ -357,16 +419,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="du8-TE-G8h">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="du8-TE-G8h">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="nFL-yJ-AGB" customClass="ListViewTextTableViewCell" customModule="whereIsIt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="39" id="nFL-yJ-AGB" customClass="ListViewTextTableViewCell" customModule="whereIsIt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFL-yJ-AGB" id="HeQ-5e-SBL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -388,16 +449,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ex-cd-fzd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="家" id="lZ8-eI-6z0"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="du8-TE-G8h" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DLY-9Z-wWa"/>
+                            <constraint firstItem="du8-TE-G8h" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="WpN-Ic-MPI"/>
+                            <constraint firstItem="du8-TE-G8h" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="YKw-Tz-9Ul"/>
+                            <constraint firstItem="du8-TE-G8h" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="h0u-gq-twf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="家" id="DXF-E3-tGq">
                         <barButtonItem key="rightBarButtonItem" title="編集" id="App-zH-3Xa"/>
@@ -419,9 +479,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-rY-V8Q">
-                                <rect key="frame" x="0.0" y="88" width="414" height="723"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-rY-V8Q">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ZbD-bp-SPN">
@@ -453,6 +512,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HrU-7w-bpm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HrU-7w-bpm" firstAttribute="bottom" secondItem="TLq-rY-V8Q" secondAttribute="bottom" id="2bB-Bt-Bok"/>
+                            <constraint firstItem="TLq-rY-V8Q" firstAttribute="trailing" secondItem="HrU-7w-bpm" secondAttribute="trailing" id="Cq4-iR-FYL"/>
+                            <constraint firstItem="TLq-rY-V8Q" firstAttribute="leading" secondItem="HrU-7w-bpm" secondAttribute="leading" id="MbM-EB-5r0"/>
+                            <constraint firstItem="TLq-rY-V8Q" firstAttribute="top" secondItem="HrU-7w-bpm" secondAttribute="top" id="RP6-c7-45J"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ロッカー" id="sCK-uR-a6P">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="SiO-uD-xto"/>
@@ -474,9 +539,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="afh-TF-XJ2">
-                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="afh-TF-XJ2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7O8-Fl-iMz">
@@ -505,16 +569,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCT-6Y-vKG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="かばん" id="Cye-h8-hUQ"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jpM-to-dz3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="afh-TF-XJ2" firstAttribute="top" secondItem="jpM-to-dz3" secondAttribute="top" id="Q4F-7X-7Eb"/>
+                            <constraint firstItem="afh-TF-XJ2" firstAttribute="leading" secondItem="jpM-to-dz3" secondAttribute="leading" id="aTe-ur-T5n"/>
+                            <constraint firstItem="afh-TF-XJ2" firstAttribute="trailing" secondItem="jpM-to-dz3" secondAttribute="trailing" id="ue3-hU-ZrH"/>
+                            <constraint firstItem="jpM-to-dz3" firstAttribute="bottom" secondItem="afh-TF-XJ2" secondAttribute="bottom" id="whI-Cl-Pbh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="カバン" id="FQC-4U-QxT">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="8Ig-zb-UyN"/>
