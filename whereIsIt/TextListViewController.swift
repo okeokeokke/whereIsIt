@@ -32,6 +32,11 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+
+        table.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subjectNameArrays.count
     }

@@ -38,7 +38,7 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        print("新たに家画面",textNameArrays)
+        
         table.reloadData()
     }
     

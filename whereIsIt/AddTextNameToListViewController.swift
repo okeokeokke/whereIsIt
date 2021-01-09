@@ -28,15 +28,17 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         textNameArrays = textNameArrays.sorted(byKeyPath: "statusNumber", ascending: true)
         print("検索後,viewDidRoad", self.textNameArrays)
         table.register(UINib(nibName: "AddTextNameTableViewCell", bundle: nil),forCellReuseIdentifier:"addTextNameTableViewCell")
-        let view = UIView(frame: CGRect(x: 0, y: 0,
-                              width: 100, height: 30))
-        let item = UIBarButtonItem(customView: view)
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+//        let item = UIBarButtonItem(customView: view)
         
         
         
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        table.reloadData()
+    }
     
     
     
