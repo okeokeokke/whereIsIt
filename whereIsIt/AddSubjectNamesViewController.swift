@@ -15,6 +15,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var redButton: UIButton!
     var colorImage: UIImage?
     
+    
     let realm = try!Realm()
 
     override func viewDidLoad() {
@@ -58,7 +59,8 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     @IBAction private func didTapNumberButton(_ sender: UIButton) {
         colorImage = sender.currentBackgroundImage
         print(type(of: colorImage))
-            
+//        sender.setBackgroundImage(UIImage(named: ""), for: .normal)
+//        colorImage.restorationIdentifier
         }
     
     

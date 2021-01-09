@@ -41,10 +41,11 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         if(self.isEditing){
-            table.isEditing = editing
+            table.isEditing = true
             toolbar.isHidden = false
         }else{
-        toolbar.isHidden = true
+            toolbar.isHidden = true
+            table.isEditing = true
         }
     }
     
