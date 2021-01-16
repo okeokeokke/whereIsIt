@@ -81,11 +81,11 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         // 選択解除した行番号が出力される
-        print(indexPath.row)
+//        print(indexPath.row)
         if let firstIndex = selectedText.index(of: indexPath.row) {
-            print("インデックス番号: \(firstIndex)")
+//            print("インデックス番号: \(firstIndex)")
             selectedText.remove(at: firstIndex)
-            print("削除後",selectedText)
+//            print("削除後",selectedText)
         }
         
     }

@@ -29,7 +29,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
         //textNameArray = []
 
         // Do any additional setup after loading the view.
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +44,7 @@ class TextListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "subjectCustomTableViewCell")as!SubjectCustomTableViewCell
         cell.subjectLabel.text = subjectNameArrays[indexPath.row].name
-        print(type(of: subjectNameArrays[indexPath.row].colorImage))
+//        print(type(of: subjectNameArrays[indexPath.row].colorImage))
         cell.subjectColorImage.image = UIImage(data: subjectNameArrays[indexPath.row].colorImage as! Data)
         return cell
     }

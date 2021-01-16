@@ -26,11 +26,16 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
         uiTextField.delegate = self
         colorImage = UIImage(named: "redCircle.png")
         uiTextField.clearButtonMode = .unlessEditing
+        uiTextField.delegate = self
         
 
         // Do any additional setup after loading the view.
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     
     
@@ -43,7 +48,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
         try! self.realm.write {
             self.realm.add(subject)
         }
-        print(subject)
+//        print(subject)
         let tabVc = self.presentingViewController as! UITabBarController
         let navigationVc = tabVc.selectedViewController as! UINavigationController
         let preVC = navigationVc.topViewController as! TextListViewController
@@ -65,7 +70,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
         
         colorImage = sender.currentBackgroundImage
 //        print(type(of: colorImage))
-        print(sender.restorationIdentifier!)
+//        print(sender.restorationIdentifier!)
         sender.setBackgroundImage(UIImage(named: sender.restorationIdentifier! + "2"), for: .normal)
         button?.setBackgroundImage(UIImage(named: id!), for: .normal)
         button = sender

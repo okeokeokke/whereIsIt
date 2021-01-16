@@ -26,7 +26,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         textNameArrays = realm.objects(Book.self)
         textNameArrays = textNameArrays.filter("textSubjectName == '\(selectedItem.name)'")
         textNameArrays = textNameArrays.sorted(byKeyPath: "statusNumber", ascending: true)
-        print("検索後,viewDidRoad", self.textNameArrays)
+//        print("検索後,viewDidRoad", self.textNameArrays)
         table.register(UINib(nibName: "AddTextNameTableViewCell", bundle: nil),forCellReuseIdentifier:"addTextNameTableViewCell")
 //        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
 //        let item = UIBarButtonItem(customView: view)
@@ -67,7 +67,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
                 let realm = try Realm()
                 try! realm.write {
                     realm.delete(text)
-                    print(textNameArrays)
+//                    print(textNameArrays)
                 }
             } catch {
             }
@@ -90,14 +90,14 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
                 self.realm.add(book)
             }
             self.textNameArrays = self.textNameArrays.filter("textSubjectName == '\(self.selectedItem.name)'")
-            print(self.textNameArrays)
-            print("検索後,afterPlus", self.textNameArrays)
+//            print(self.textNameArrays)
+//            print("検索後,afterPlus", self.textNameArrays)
             
             //            print(uiTextField.text!)
             self.table.reloadData()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            print(uiTextField.text!)
+//            print(uiTextField.text!)
         }
         ac.addTextField { (textField) in
             textField.placeholder = "教材名"
@@ -120,10 +120,10 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
         var results = realm.objects(Book.self)
         
         //この時のresults内の要素の配列は不定です。
-        print("検索前", results)
+//        print("検索前", results)
         //BookのtextSubjectName == selectedItemのname
         results = results.filter("textSubjectName == '\(selectedItem.name)'")
-        print("検索後", results)
+//        print("検索後", results)
     }
     
     
