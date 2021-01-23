@@ -46,7 +46,6 @@
 		E89FB5B024E686430004A2E7 /* whereIsItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB5AF24E686430004A2E7 /* whereIsItTests.swift */; };
 		E89FB5BB24E686430004A2E7 /* whereIsItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89FB5BA24E686430004A2E7 /* whereIsItUITests.swift */; };
 		E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */; };
-		E89FB5CF24E686A20004A2E7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CA24E686A20004A2E7 /* icon.png */; };
 		E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CB24E686A20004A2E7 /* rockerIcon.png */; };
 		E89FB5D124E686A20004A2E7 /* textIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CC24E686A20004A2E7 /* textIcon.png */; };
 		E89FB5D224E686A20004A2E7 /* bagIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E89FB5CD24E686A20004A2E7 /* bagIcon.png */; };
@@ -91,6 +90,8 @@
 		E8DC81C225A9BAA100C1B3B0 /* NewRedButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81B825A9BAA000C1B3B0 /* NewRedButton2.png */; };
 		E8DC81C325A9BAA100C1B3B0 /* NewOrangeButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81B925A9BAA000C1B3B0 /* NewOrangeButton2.png */; };
 		E8DC81C425A9BAA100C1B3B0 /* NewGreenButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81BA25A9BAA000C1B3B0 /* NewGreenButton2.png */; };
+		E8F9D36525BC2A0F001959E2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F9D36425BC2A0F001959E2 /* icon.png */; };
+		E8F9D36D25BC2D83001959E2 /* launchScreenImageNew.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,7 +159,6 @@
 		E89FB5BA24E686430004A2E7 /* whereIsItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereIsItUITests.swift; sourceTree = "<group>"; };
 		E89FB5BC24E686430004A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookInHouseIcon.png; sourceTree = "<group>"; };
-		E89FB5CA24E686A20004A2E7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E89FB5CB24E686A20004A2E7 /* rockerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockerIcon.png; sourceTree = "<group>"; };
 		E89FB5CC24E686A20004A2E7 /* textIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textIcon.png; sourceTree = "<group>"; };
 		E89FB5CD24E686A20004A2E7 /* bagIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bagIcon.png; sourceTree = "<group>"; };
@@ -203,6 +203,8 @@
 		E8DC81B825A9BAA000C1B3B0 /* NewRedButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewRedButton2.png; sourceTree = "<group>"; };
 		E8DC81B925A9BAA000C1B3B0 /* NewOrangeButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewOrangeButton2.png; sourceTree = "<group>"; };
 		E8DC81BA25A9BAA000C1B3B0 /* NewGreenButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGreenButton2.png; sourceTree = "<group>"; };
+		E8F9D36425BC2A0F001959E2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenImageNew.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,8 @@
 		E89FB59524E686420004A2E7 /* whereIsIt */ = {
 			isa = PBXGroup;
 			children = (
+				E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */,
+				E8F9D36425BC2A0F001959E2 /* icon.png */,
 				E87906C725B2F53D0005B00D /* launchScreenImage.png */,
 				E8DC81B025A9BAA000C1B3B0 /* whereIsIt7 */,
 				E8DC81A825A9AA8D00C1B3B0 /* whereIsItMaterial6 */,
@@ -362,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				E89FB5C924E686A20004A2E7 /* bookInHouseIcon.png */,
-				E89FB5CA24E686A20004A2E7 /* icon.png */,
 				E89FB5CB24E686A20004A2E7 /* rockerIcon.png */,
 				E89FB5CC24E686A20004A2E7 /* textIcon.png */,
 				E89FB5CD24E686A20004A2E7 /* bagIcon.png */,
@@ -550,9 +553,11 @@
 				E8DC819225A98EDA00C1B3B0 /* NewBeigeButton.png in Resources */,
 				E87D934D25722AB900C5A594 /* plumCircle.png in Resources */,
 				E87D9373257602DA00C5A594 /* bagStatus.png in Resources */,
+				E8F9D36525BC2A0F001959E2 /* icon.png in Resources */,
 				E8DC818F25A98EDA00C1B3B0 /* NewOrangeButton.png in Resources */,
 				E8DC81C325A9BAA100C1B3B0 /* NewOrangeButton2.png in Resources */,
 				E87D934B25722AB900C5A594 /* greenCircle.png in Resources */,
+				E8F9D36D25BC2D83001959E2 /* launchScreenImageNew.png in Resources */,
 				E8DC81BB25A9BAA100C1B3B0 /* NewBeigeButton2.png in Resources */,
 				E8DC81BD25A9BAA100C1B3B0 /* NewLightgreenButton2.png in Resources */,
 				E8DC81A425A99D3700C1B3B0 /* newLockerIcon@3x.png in Resources */,
@@ -581,7 +586,6 @@
 				E8DC819A25A98EDA00C1B3B0 /* NewPurpleButton.png in Resources */,
 				E8DC81BE25A9BAA100C1B3B0 /* NewYellowButton2.png in Resources */,
 				E87D937A257B658900C5A594 /* ListViewTextTableViewCell.xib in Resources */,
-				E89FB5CF24E686A20004A2E7 /* icon.png in Resources */,
 				E89FB5D024E686A20004A2E7 /* rockerIcon.png in Resources */,
 				E89FB5CE24E686A20004A2E7 /* bookInHouseIcon.png in Resources */,
 				E8DC818B25A98EDA00C1B3B0 /* tappedSkyblueButton.png in Resources */,

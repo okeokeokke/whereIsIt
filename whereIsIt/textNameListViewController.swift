@@ -52,7 +52,7 @@ class TextNameListViewController: UIViewController, UITableViewDataSource, UITab
         cell.subjectLabel.text = String(textNameArrays[indexPath.row].textSubjectName)
         cell.textNameLabel.text = String(textNameArrays[indexPath.row].textName)
         subjectColorArray = subjectColorArray.filter("name == '"  + textNameArrays[indexPath.row].textSubjectName+"'")
-        print(subjectColorArray)
+//        print(subjectColorArray)
         cell.subjectColor.image = UIImage(data: subjectColorArray[0].colorImage as! Data)
         if textNameArrays[indexPath.row].status == "homeTextListView" {
             cell.tagImage.image = UIImage(named: "houseStatus.png")

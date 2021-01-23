@@ -24,7 +24,7 @@ class AddSubjectNamesViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiTextField.delegate = self
-        colorImage = UIImage(named: "redCircle.png")
+        colorImage = UIImage(named: "NewRedButton")
         uiTextField.clearButtonMode = .unlessEditing
         uiTextField.delegate = self
         

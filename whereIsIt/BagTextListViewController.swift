@@ -26,6 +26,7 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         textNameArrays = textNameArrays.sorted(byKeyPath: "textSubjectName", ascending: true)
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
+        navigationItem.rightBarButtonItem?.title = "編集"
         table.register(UINib(nibName: "ListViewTextTableViewCell", bundle: nil),forCellReuseIdentifier:"listViewTextCustomCell")
 //        table.rowHeight = 40
         toolbar.isHidden = true
@@ -43,9 +44,10 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
         if(self.isEditing){
             table.isEditing = editing
             toolbar.isHidden = false
+            navigationItem.rightBarButtonItem?.title = "完了"
         }else{
         toolbar.isHidden = true
-            
+            navigationItem.rightBarButtonItem?.title = "編集"
         }
     }
     
