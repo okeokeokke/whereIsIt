@@ -96,7 +96,7 @@ class AddTextNameToListViewController: UIViewController, UITableViewDataSource {
             //            print(uiTextField.text!)
             self.table.reloadData()
         }
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (action) in
 //            print(uiTextField.text!)
         }
         ac.addTextField { (textField) in

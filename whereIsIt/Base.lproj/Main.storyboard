@@ -320,12 +320,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="教科名追加" id="Xid-Oj-JEh">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gqf-g2-DNk">
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="Gqf-g2-DNk">
                                             <connections>
                                                 <action selector="cancelButton" destination="Z8o-3g-fxg" id="djW-pc-byz"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="46k-dG-MOW">
+                                        <barButtonItem key="rightBarButtonItem" title="完了" id="46k-dG-MOW">
                                             <connections>
                                                 <action selector="doneButton" destination="Z8o-3g-fxg" id="K9b-8t-A5N"/>
                                             </connections>
@@ -425,7 +425,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rIs-5x-jCf">
-                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="770" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="ロッカーへ" id="jPv-kh-xay">
@@ -485,7 +485,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Vh5-t4-zag">
-                                <rect key="frame" x="0.0" y="767" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="768" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="カバンへ" id="dRq-P6-PdO">

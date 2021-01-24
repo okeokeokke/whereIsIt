@@ -31,7 +31,8 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         //        print("ViewDidLoadが実行")
         table.allowsMultipleSelectionDuringEditing = true //セルの複数選択を可能にする
         navigationItem.rightBarButtonItem = editButtonItem //右上に編集ボタンを追加
-        navigationItem.rightBarButtonItem?.title = "編集"
+//        navigationItem.rightBarButtonItem?.title = "編集"
+        self.editButtonItem.title = "編集"
 //        table.rowHeight = 40
         toolbar.isHidden = true
         
@@ -43,6 +44,9 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewWillAppear(_ animated: Bool) {
         //        print("新たに家画面",textNameArrays)
+//        table.isEditing = false
+//        toolbar.isHidden = true
+//        navigationItem.rightBarButtonItem?.title = "編集"
         table.reloadData()
     }
     
@@ -51,11 +55,13 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
         if(self.isEditing){
             table.isEditing = true
             toolbar.isHidden = false
-            navigationItem.rightBarButtonItem?.title = "完了"
+            self.editButtonItem.title = "完了"
+//            navigationItem.rightBarButtonItem?.title = "完了"
         }else{
             table.isEditing = false
             toolbar.isHidden = true
-            navigationItem.rightBarButtonItem?.title = "編集"
+            self.editButtonItem.title = "編集"
+//            navigationItem.rightBarButtonItem?.title = "編集"
         }
         
     }
