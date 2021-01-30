@@ -42,11 +42,12 @@ class BagTextListViewController: UIViewController, UITableViewDataSource, UITabl
     override func setEditing(_ editing: Bool, animated: Bool) {
        super.setEditing(editing, animated: animated)
         if(self.isEditing){
-            table.isEditing = editing
+            table.isEditing = true
             toolbar.isHidden = false
             navigationItem.rightBarButtonItem?.title = "完了"
         }else{
-        toolbar.isHidden = true
+            toolbar.isHidden = true
+            table.isEditing = false
             navigationItem.rightBarButtonItem?.title = "編集"
         }
     }

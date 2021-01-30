@@ -47,7 +47,7 @@ class RockerListTextViewController: UIViewController, UITableViewDataSource, UIT
             navigationItem.rightBarButtonItem?.title = "完了"
         }else{
             toolbar.isHidden = true
-            table.isEditing = true
+            table.isEditing = false
             navigationItem.rightBarButtonItem?.title = "編集"
         }
     }

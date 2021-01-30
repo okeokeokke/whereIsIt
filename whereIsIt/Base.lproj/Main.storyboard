@@ -424,18 +424,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rIs-5x-jCf">
-                                <rect key="frame" x="0.0" y="770" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2X-fe-1lt">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="ロッカーへ" id="jPv-kh-xay">
+                                    <barButtonItem title="ロッカーへ" id="66X-mL-3kr">
                                         <connections>
-                                            <action selector="toLocker" destination="8rJ-Kc-sve" id="7vS-GG-IbA"/>
+                                            <action selector="toLocker" destination="8rJ-Kc-sve" id="ygW-aS-Ndi"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="カバンへ" id="rwi-AE-RPE">
+                                    <barButtonItem title="カバンへ" id="rXe-N7-70C">
                                         <connections>
-                                            <action selector="toBag" destination="8rJ-Kc-sve" id="DOi-pF-1DH"/>
+                                            <action selector="toBag" destination="8rJ-Kc-sve" id="wbI-6H-DLm"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -445,9 +444,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="du8-TE-G8h" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DLY-9Z-wWa"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="C2X-fe-1lt" secondAttribute="bottom" id="IPq-P6-sHd"/>
                             <constraint firstItem="du8-TE-G8h" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="WpN-Ic-MPI"/>
                             <constraint firstItem="du8-TE-G8h" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="YKw-Tz-9Ul"/>
+                            <constraint firstItem="C2X-fe-1lt" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="dkk-Wd-jho"/>
                             <constraint firstItem="du8-TE-G8h" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="h0u-gq-twf"/>
+                            <constraint firstItem="C2X-fe-1lt" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="wqG-Lg-Aaq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="家" id="DXF-E3-tGq">
@@ -455,7 +457,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="du8-TE-G8h" id="sn7-dX-JYN"/>
-                        <outlet property="toolbar" destination="rIs-5x-jCf" id="azt-O2-R5y"/>
+                        <outlet property="toolbar" destination="C2X-fe-1lt" id="Dgl-xk-c7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -484,18 +486,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Vh5-t4-zag">
-                                <rect key="frame" x="0.0" y="768" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yp6-4u-JG9">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="カバンへ" id="dRq-P6-PdO">
+                                    <barButtonItem title="カバンへ" id="ELQ-zE-bPR">
                                         <connections>
-                                            <action selector="toBag" destination="pto-2x-n26" id="ViG-gM-NmX"/>
+                                            <action selector="toBag" destination="pto-2x-n26" id="eIw-KU-0Rm"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="家へ" id="Ejc-fQ-2hA">
+                                    <barButtonItem title="ロッカーへ" id="fd6-g7-5pi">
                                         <connections>
-                                            <action selector="toHome" destination="pto-2x-n26" id="1UM-M9-NeF"/>
+                                            <action selector="toHome" destination="pto-2x-n26" id="g0i-m5-FfX"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -506,8 +507,11 @@
                         <constraints>
                             <constraint firstItem="HrU-7w-bpm" firstAttribute="bottom" secondItem="TLq-rY-V8Q" secondAttribute="bottom" id="2bB-Bt-Bok"/>
                             <constraint firstItem="TLq-rY-V8Q" firstAttribute="trailing" secondItem="HrU-7w-bpm" secondAttribute="trailing" id="Cq4-iR-FYL"/>
+                            <constraint firstItem="yp6-4u-JG9" firstAttribute="trailing" secondItem="HrU-7w-bpm" secondAttribute="trailing" id="Fh6-fX-YMd"/>
                             <constraint firstItem="TLq-rY-V8Q" firstAttribute="leading" secondItem="HrU-7w-bpm" secondAttribute="leading" id="MbM-EB-5r0"/>
+                            <constraint firstItem="yp6-4u-JG9" firstAttribute="leading" secondItem="HrU-7w-bpm" secondAttribute="leading" id="QDk-IJ-Qzy"/>
                             <constraint firstItem="TLq-rY-V8Q" firstAttribute="top" secondItem="HrU-7w-bpm" secondAttribute="top" id="RP6-c7-45J"/>
+                            <constraint firstItem="HrU-7w-bpm" firstAttribute="bottom" secondItem="yp6-4u-JG9" secondAttribute="bottom" id="e0z-4b-nwj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ロッカー" id="sCK-uR-a6P">
@@ -515,7 +519,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="TLq-rY-V8Q" id="7JX-PN-cB1"/>
-                        <outlet property="toolbar" destination="Vh5-t4-zag" id="aZb-CN-8Lx"/>
+                        <outlet property="toolbar" destination="yp6-4u-JG9" id="ujt-z5-RQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21b-fe-Pdm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -544,18 +548,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5WE-RY-Q9g">
-                                <rect key="frame" x="0.0" y="768" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-9x-xhS">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="家へ" id="D8t-3b-I5i">
+                                    <barButtonItem title="家へ" id="oIF-nW-wTF">
                                         <connections>
-                                            <action selector="toHome" destination="oPn-2Z-h9G" id="zkz-2h-RzU"/>
+                                            <action selector="toHome" destination="oPn-2Z-h9G" id="bvF-ke-RqY"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="ロッカーへ" id="une-XS-2Dl">
+                                    <barButtonItem title="ロッカーへ" id="fMA-zm-j5H">
                                         <connections>
-                                            <action selector="toLocker" destination="oPn-2Z-h9G" id="73v-vr-vFA"/>
+                                            <action selector="toLocker" destination="oPn-2Z-h9G" id="Jc6-Uf-AME"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -565,9 +568,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="afh-TF-XJ2" firstAttribute="top" secondItem="jpM-to-dz3" secondAttribute="top" id="Q4F-7X-7Eb"/>
+                            <constraint firstItem="RAx-9x-xhS" firstAttribute="bottom" secondItem="jpM-to-dz3" secondAttribute="bottom" id="T5C-da-jK3"/>
                             <constraint firstItem="afh-TF-XJ2" firstAttribute="leading" secondItem="jpM-to-dz3" secondAttribute="leading" id="aTe-ur-T5n"/>
+                            <constraint firstItem="RAx-9x-xhS" firstAttribute="trailing" secondItem="jpM-to-dz3" secondAttribute="trailing" id="jy3-CB-zFO"/>
                             <constraint firstItem="afh-TF-XJ2" firstAttribute="trailing" secondItem="jpM-to-dz3" secondAttribute="trailing" id="ue3-hU-ZrH"/>
                             <constraint firstItem="jpM-to-dz3" firstAttribute="bottom" secondItem="afh-TF-XJ2" secondAttribute="bottom" id="whI-Cl-Pbh"/>
+                            <constraint firstItem="RAx-9x-xhS" firstAttribute="leading" secondItem="jpM-to-dz3" secondAttribute="leading" id="xME-kV-hoI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="カバン" id="FQC-4U-QxT">
@@ -575,7 +581,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="afh-TF-XJ2" id="xfr-lJ-Ykq"/>
-                        <outlet property="toolbar" destination="5WE-RY-Q9g" id="GwT-jq-oB5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGQ-ix-Iqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

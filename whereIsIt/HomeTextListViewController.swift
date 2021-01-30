@@ -43,7 +43,6 @@ class HomeTextListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        print("新たに家画面",textNameArrays)
 //        table.isEditing = false
 //        toolbar.isHidden = true
 //        navigationItem.rightBarButtonItem?.title = "編集"
