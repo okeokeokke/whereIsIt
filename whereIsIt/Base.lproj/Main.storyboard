@@ -581,6 +581,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="afh-TF-XJ2" id="xfr-lJ-Ykq"/>
+                        <outlet property="toolbar" destination="RAx-9x-xhS" id="TdG-rv-HXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGQ-ix-Iqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
