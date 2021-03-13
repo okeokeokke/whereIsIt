@@ -90,7 +90,6 @@
 		E8DC81C225A9BAA100C1B3B0 /* NewRedButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81B825A9BAA000C1B3B0 /* NewRedButton2.png */; };
 		E8DC81C325A9BAA100C1B3B0 /* NewOrangeButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81B925A9BAA000C1B3B0 /* NewOrangeButton2.png */; };
 		E8DC81C425A9BAA100C1B3B0 /* NewGreenButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = E8DC81BA25A9BAA000C1B3B0 /* NewGreenButton2.png */; };
-		E8F9D36525BC2A0F001959E2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F9D36425BC2A0F001959E2 /* icon.png */; };
 		E8F9D36D25BC2D83001959E2 /* launchScreenImageNew.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */; };
 /* End PBXBuildFile section */
 
@@ -203,7 +202,6 @@
 		E8DC81B825A9BAA000C1B3B0 /* NewRedButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewRedButton2.png; sourceTree = "<group>"; };
 		E8DC81B925A9BAA000C1B3B0 /* NewOrangeButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewOrangeButton2.png; sourceTree = "<group>"; };
 		E8DC81BA25A9BAA000C1B3B0 /* NewGreenButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGreenButton2.png; sourceTree = "<group>"; };
-		E8F9D36425BC2A0F001959E2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreenImageNew.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				E8F9D36C25BC2D83001959E2 /* launchScreenImageNew.png */,
-				E8F9D36425BC2A0F001959E2 /* icon.png */,
 				E87906C725B2F53D0005B00D /* launchScreenImage.png */,
 				E8DC81B025A9BAA000C1B3B0 /* whereIsIt7 */,
 				E8DC81A825A9AA8D00C1B3B0 /* whereIsItMaterial6 */,
@@ -553,7 +550,6 @@
 				E8DC819225A98EDA00C1B3B0 /* NewBeigeButton.png in Resources */,
 				E87D934D25722AB900C5A594 /* plumCircle.png in Resources */,
 				E87D9373257602DA00C5A594 /* bagStatus.png in Resources */,
-				E8F9D36525BC2A0F001959E2 /* icon.png in Resources */,
 				E8DC818F25A98EDA00C1B3B0 /* NewOrangeButton.png in Resources */,
 				E8DC81C325A9BAA100C1B3B0 /* NewOrangeButton2.png in Resources */,
 				E87D934B25722AB900C5A594 /* greenCircle.png in Resources */,
@@ -862,15 +858,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52D0E739E378ED4B98ACCBE8 /* Pods-whereIsIt.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73W3QDR29L;
+				DEVELOPMENT_TEAM = 6F2R9D2J2G;
 				INFOPLIST_FILE = whereIsIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.okemoto.okke.whereIsIt;
+				PRODUCT_BUNDLE_IDENTIFIER = app.okemoto.aika.whereIsIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -881,15 +877,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50E279F880401734E2C5D3EE /* Pods-whereIsIt.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73W3QDR29L;
+				DEVELOPMENT_TEAM = 6F2R9D2J2G;
 				INFOPLIST_FILE = whereIsIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.okemoto.okke.whereIsIt;
+				PRODUCT_BUNDLE_IDENTIFIER = app.okemoto.aika.whereIsIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
